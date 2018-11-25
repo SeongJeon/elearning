@@ -11,7 +11,7 @@
 #controls {}
 
 /* CONTROLS - PAGER */
-#controlsPage {position: relative;}
+#controlsPage {position: relative; padding:0 100px;}
 #controlsPage .number {}
 #controlsPage div[class*="btn-"] {position: absolute; top:0;}
 #controlsPage div[class*="btn-"][class*="-prev"] {left:0;}

@@ -1,0 +1,50 @@
+{
+	"part1" : {
+		"part" : 1,
+		"total" : 3,
+		"listName" : [
+			"1. 바보들의 반란1",
+			"1. 바보들의 반란2",
+			"1. 바보들의 반란3"
+		],
+		"fileName" : [
+			"test1-1.html",
+			"test1-2.html",
+			"test1-3.html"
+		]
+	},
+	"part2" : {
+		"part" : 2,
+		"total" : 4,
+		"listName" : [
+			"2. 멍청이들의 반란1",
+			"2. 멍청이들의 반란2",
+			"2. 멍청이들의 반란3",
+			"2. 멍청이들의 반란4"
+		],
+		"fileName" : [
+			"test2-1.html",
+			"test2-2.html",
+			"test2-3.html",
+			"test2-4.html"
+		]
+	},
+	"part3" : {
+		"part" : 3,
+		"total" : 5,
+		"listName" : [
+			"3. 루저들의 반란1",
+			"3. 루저들의 반란2",
+			"3. 루저들의 반란3",
+			"3. 루저들의 반란4",
+			"3. 루저들의 반란5"
+		],
+		"fileName" : [
+			"test3-1.html",
+			"test3-2.html",
+			"test3-3.html",
+			"test3-4.html",
+			"test3-5.html"
+		]
+	}
+}
