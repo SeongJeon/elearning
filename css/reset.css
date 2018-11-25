@@ -1,0 +1,144 @@
+@charset "utf-8";
+
+/* FONT STYLE */
+@font-face {
+    font-family: "NanumBarunGothic";
+    src: url("../fonts/NanumBarunGothicUltraLight.eot");
+    src: url("../fonts/NanumBarunGothicUltraLight.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/NanumBarunGothicUltraLight.woff") format("woff"),
+        url("../fonts/NanumBarunGothicUltraLight.ttf") format("truetype");
+    font-weight: 200;
+}
+@font-face {
+    font-family: "NanumBarunGothic";
+    src: url("../fonts/NanumBarunGothicLight.eot");
+    src: url("../fonts/NanumBarunGothicLight.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/NanumBarunGothicLight.woff") format("woff"),
+        url("../fonts/NanumBarunGothicLight.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "NanumBarunGothic";
+    src: url("../fonts/NanumBarunGothic.eot");
+    src: url("../fonts/NanumBarunGothic.eot?#iefix") format("embedded-opentype"),
+        url("../fonts/NanumBarunGothic.woff") format("woff"),
+        url("../fonts/NanumBarunGothic.ttf") format("truetype");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "NanumBarunGothic";
+    src: url("../fonts/NanumBarunGothicBold.eot");
+    src: url("../fonts/NanumBarunGothicBold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/NanumBarunGothicBold.woff") format("woff"),
+    url("../fonts/NanumBarunGothicBold.ttf") format("truetype");
+    font-weight: bold;
+}
+
+
+@font-face {
+    font-family: "poppins";
+    src: url("../fonts/Poppins-Thin.eot");
+    src: url("../fonts/Poppins-Thin.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Poppins-Thin.woff") format("woff"),
+    url("../fonts/Poppins-Thin.ttf") format("truetype");
+    font-weight: 100;
+}
+@font-face {
+    font-family: "poppins";
+    src: url("../fonts/Poppins-Light.eot");
+    src: url("../fonts/Poppins-Light.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Poppins-Light.woff") format("woff"),
+    url("../fonts/Poppins-Light.ttf") format("truetype");
+    font-weight: 200;
+}
+@font-face {
+    font-family: "poppins";
+    src: url("../fonts/Poppins-Regular.eot");
+    src: url("../fonts/Poppins-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Poppins-Regular.woff") format("woff"),
+    url("../fonts/Poppins-Regular.ttf") format("truetype");
+    font-weight: 300;
+}
+@font-face {
+    font-family: "poppins";
+    src: url("../fonts/Poppins-Medium.eot");
+    src: url("../fonts/Poppins-Medium.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Poppins-Medium.woff") format("woff"),
+    url("../fonts/Poppins-Medium.ttf") format("truetype");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "poppins";
+    src: url("../fonts/Poppins-SemiBold.eot");
+    src: url("../fonts/Poppins-SemiBold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Poppins-SemiBold.woff") format("woff"),
+    url("../fonts/Poppins-SemiBold.ttf") format("truetype");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "poppins";
+    src: url("../fonts/Poppins-Bold.eot");
+    src: url("../fonts/Poppins-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Poppins-Bold.woff") format("woff"),
+    url("../fonts/Poppins-Bold.ttf") format("truetype");
+    font-weight: bold;
+}
+
+
+
+/* RESET */
+* {outline:none}
+html {font-family:'NanumBarunGothic','poppins', 'Malgun Gothic','굴림',Gulim,'돋움',Dotum,Sans-serif; color:#333; -webkit-text-size-adjust:none;  font-size:16px; letter-spacing:-0.5px; font-weight:normal; -webkit-overflow-scrolling:touch; }
+html body {min-width:320px;}
+html body.ios {font-family:'Helvetica Neue', "Apple SD Gothic Neo";}
+html, body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, span, form, fieldset, input, select, label, textarea, table, caption, thead, tfoot, tbody, tr, th, td {margin:0;padding:0;-webkit-text-size-adjust:none; font-weight:normal;}
+address {font-stretch:normal;}
+b, span, strong, input, a, button{font-size:inherit;font-family:inherit;color:inherit;  line-height:inherit;}
+article, aside, dialog, footer, header, section, footer, nav, figure, hgroup, details, summary, figure, figcaption {display: block;}
+cite{display:inline}
+html {height:100%;}
+html{-webkit-text-size-adjust: none; -moz-text-size-adjust: none; -ms-text-size-adjust: none;}
+body {overflow-y:scroll; margin:0px; background-attachment: fixed;}
+a:link {text-decoration:none;}
+a:visited {text-decoration:none;}
+img{border:0;max-width:100%}
+label, input, textarea, select{ vertical-align:middle; border:0; border-radius:0;  }
+label, input, textarea {-webkit-appearance: none; -webkit-border-radius: 0;}
+ol, ul{list-style:none; margin:0; padding:0;}
+li {list-style:none;}
+table{border-collapse:collapse;table-layout:fixed; width:100%;}
+fieldset{border:none}
+.skip, hr, legend{position:absolute;left:-1000%;width:1px;height:1px;font-size:0;line-height:0;overflow:hidden;}
+caption{font-size:0;height:0;opacity:0}
+button{margin:0;padding:0;border:none; background:none; cursor:pointer; display:inline-block;}
+em, address {font-style:normal; }
+strong {font-weight:normal;}
+select {-webkit-appearance: none; -moz-appearance: none; appearance: none;}
+a, button, input {outline:none;}
+input {
+    &::-webkit-input-placeholder { color: #fff; }
+    &::-moz-placeholder { color: #fff; }
+    &:-ms-input-placeholder { color: #fff; }
+    &:-moz-placeholder { color: #fff; }
+}
+caption {overflow:hidden; visibility:hidden; height:0; text-indent:-9999em;}
+
+/* COMMON */
+#skipnavi a {display:block; position:absolute; top:0px; left:-202px; width:200px; height:40px; padding:0; border:1px solid #dcdcdc; color:#555; font-size:15px; background:#fff; text-align:center; line-height:40px; font-weight:700; z-index:10000; transition:all 0.3s ease;}
+#skipnavi a:focus {top:0; left:0;}
+.hidden {position:absolute; overflow:hidden; top:0; left:0; width:1px; height:1px; text-indent:-99999em;}
+
+
+
+
+/*
+@media (max-width: 1025px) { html {font-size:10px;}}
+@media (max-width: 900px) { html {font-size:9px;}}
+@media (max-width: 850px) { html {font-size:8.5px;}}
+@media (max-width: 800px) { html {font-size:8px;}}
+@media (max-width: 767px) { html {font-size:11px;}}
+@media (max-width: 375px) { html {font-size:10px;}}
+@media (max-width: 321px) { html {font-size:9px;}}
+*/

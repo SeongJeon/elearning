@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+/* LAYOUT */
+#wrap {position: relative;}
+#header {position: absolute; top: 0 ; left:0; width: 100%; }
+#container {position: relative; overflow: hidden;}
+#container {padding-top: 100px;}/* temp*/
+
+
+/* CONTROLS */
+#controls {}
+
+/* CONTROLS - PAGER */
+#controlsPage {position: relative;}
+#controlsPage .number {}
+#controlsPage div[class*="btn-"] {position: absolute; top:0;}
+#controlsPage div[class*="btn-"][class*="-prev"] {left:0;}
+#controlsPage div[class*="btn-"][class*="-next"] {right:0;}
+#controlsPage div[class*="btn-"] button {}
+#controlsPage div[class*="btn-"][class*="-prev"] button {}
+#controlsPage div[class*="btn-"][class*="-next"] button {}
