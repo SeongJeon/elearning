@@ -38,7 +38,7 @@
 .jp-gui .jp-video-play button {overflow:hidden; position: absolute; top:0; left:0; width: 100%; height:610px; background: url(../images/common/btn-play.png) no-repeat 50% 50%; text-indent: -999em;}
 .jp-interface {display: inline-block; width: 640px; height: 60px; padding-top: 8px; position: absolute; left:192px; bottom:-60px; z-index: 1000; box-sizing: border-box}
 .jp-interface:after {display:block; clear:both; content:""}
-.jp-progress {float:left;  width: 300px; height: 6px; margin-right: 10px; border-radius: 5px; background: #9b9b9b;}
+.jp-progress {float:left;  width: 300px; height: 6px; margin-right: 10px; margin-top: 19px; border-radius: 5px; background: #9b9b9b;}
 .jp-progress .jp-seek-bar { height:100%; border-radius: 5px; background: #d6d6d6; border-radius: 5px;}
 .jp-progress  .jp-play-bar {position: relative;overflow:visible !important; height: 100%; border-radius: 5px; background: #fe7903; /* Old browsers */ background: -moz-linear-gradient(left, #fe7903 0%, #4a97c7 100%); /* FF3.6-15 */ background: -webkit-linear-gradient(left, #fe7903 0%,#4a97c7 100%); /* Chrome10-25,Safari5.1-6 */ background: linear-gradient(to right, #fe7903 0%,#4a97c7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fe7903', endColorstr='#4a97c7',GradientType=1 ); /* IE6-9 */ }
 .jp-progress .jp-play-bar:after {display:block; position: absolute; right:-7px; top:-4px; content:""; width: 15px; height: 15px; background: #4a97c7; border-radius: 100px; box-shadow: 0 0 6px rgba(0,0,0,0.25)}
