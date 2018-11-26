@@ -15,6 +15,7 @@ var fncControlsComponent = (function(){
 		 partLst = $(".partListZone .partlist ol"),
 		 pager = $("#controlsPage .number"), 
 		 gnbBtn = $(".navZone .btn"),
+		 partLstBtn = $(".partListZone .btn"),
 		 current = 0, maxNum,  jsonAry=[], spd =300;
 		 // console.log(partNum);
 
@@ -64,10 +65,21 @@ var fncControlsComponent = (function(){
 	gnbBtn.on("click", function(){
 		if(gnbBtn.hasClass("open")){
 			gnbBtn.removeClass("open");
-			$("#gnb").stop().slideUp(spd);
+			$("#gnb").hide();
 		}else {
 			gnbBtn.addClass("open");
-			$("#gnb").stop().slideDown(spd);
+			$("#gnb").show();
+		}
+	})
+	// partListZone CONTROLS
+	$(".partlist").hide();
+	partLstBtn.on("click", function(){
+		if(partLstBtn.hasClass("open")){
+			partLstBtn.removeClass("open");
+			$(".partlist").hide();
+		}else {
+			partLstBtn.addClass("open");
+			$(".partlist").show();
 		}
 	})
 })();

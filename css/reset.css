@@ -1,99 +1,45 @@
 @charset "utf-8";
 
-/* FONT STYLE */
+
+
+/* FONTS */
 @font-face {
-    font-family: "NanumBarunGothic";
-    src: url("../fonts/NanumBarunGothicUltraLight.eot");
-    src: url("../fonts/NanumBarunGothicUltraLight.eot?#iefix") format("embedded-opentype"),
-        url("../fonts/NanumBarunGothicUltraLight.woff") format("woff"),
-        url("../fonts/NanumBarunGothicUltraLight.ttf") format("truetype");
-    font-weight: 200;
-}
-@font-face {
-    font-family: "NanumBarunGothic";
-    src: url("../fonts/NanumBarunGothicLight.eot");
-    src: url("../fonts/NanumBarunGothicLight.eot?#iefix") format("embedded-opentype"),
-        url("../fonts/NanumBarunGothicLight.woff") format("woff"),
-        url("../fonts/NanumBarunGothicLight.ttf") format("truetype");
+    font-family: "NanumGothic";
     font-weight: normal;
-    font-style: normal;
+    src: url("../fonts/NanumGothic-Regular.eot");
+    src: url("../fonts/NanumGothic-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/NanumGothic-Regular.woff") format("woff"),
+    url("../fonts/NanumGothic-Regular.ttf") format("truetype");
 }
+
+
 @font-face {
-    font-family: "NanumBarunGothic";
-    src: url("../fonts/NanumBarunGothic.eot");
-    src: url("../fonts/NanumBarunGothic.eot?#iefix") format("embedded-opentype"),
-        url("../fonts/NanumBarunGothic.woff") format("woff"),
-        url("../fonts/NanumBarunGothic.ttf") format("truetype");
+    font-family: "NanumGothic";
     font-weight: 500;
+    src: url("../fonts/NanumGothic-ExtraBold.eot");
+    src: url("../fonts/NanumGothic-ExtraBold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/NanumGothic-ExtraBold.woff") format("woff"),
+    url("../fonts/NanumGothic-ExtraBold.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: "NanumBarunGothic";
-    src: url("../fonts/NanumBarunGothicBold.eot");
-    src: url("../fonts/NanumBarunGothicBold.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/NanumBarunGothicBold.woff") format("woff"),
-    url("../fonts/NanumBarunGothicBold.ttf") format("truetype");
+    font-family: "NanumGothic";
     font-weight: bold;
+    src: url("../fonts/NanumGothic-Bold.eot");
+    src: url("../fonts/NanumGothic-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/NanumGothic-Bold.woff") format("woff"),
+    url("../fonts/NanumGothic-Bold.ttf") format("truetype");
 }
 
-
-@font-face {
-    font-family: "poppins";
-    src: url("../fonts/Poppins-Thin.eot");
-    src: url("../fonts/Poppins-Thin.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/Poppins-Thin.woff") format("woff"),
-    url("../fonts/Poppins-Thin.ttf") format("truetype");
-    font-weight: 100;
-}
-@font-face {
-    font-family: "poppins";
-    src: url("../fonts/Poppins-Light.eot");
-    src: url("../fonts/Poppins-Light.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/Poppins-Light.woff") format("woff"),
-    url("../fonts/Poppins-Light.ttf") format("truetype");
-    font-weight: 200;
-}
-@font-face {
-    font-family: "poppins";
-    src: url("../fonts/Poppins-Regular.eot");
-    src: url("../fonts/Poppins-Regular.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/Poppins-Regular.woff") format("woff"),
-    url("../fonts/Poppins-Regular.ttf") format("truetype");
-    font-weight: 300;
-}
-@font-face {
-    font-family: "poppins";
-    src: url("../fonts/Poppins-Medium.eot");
-    src: url("../fonts/Poppins-Medium.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/Poppins-Medium.woff") format("woff"),
-    url("../fonts/Poppins-Medium.ttf") format("truetype");
-    font-weight: 400;
-}
-@font-face {
-    font-family: "poppins";
-    src: url("../fonts/Poppins-SemiBold.eot");
-    src: url("../fonts/Poppins-SemiBold.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/Poppins-SemiBold.woff") format("woff"),
-    url("../fonts/Poppins-SemiBold.ttf") format("truetype");
-    font-weight: 500;
-}
-@font-face {
-    font-family: "poppins";
-    src: url("../fonts/Poppins-Bold.eot");
-    src: url("../fonts/Poppins-Bold.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/Poppins-Bold.woff") format("woff"),
-    url("../fonts/Poppins-Bold.ttf") format("truetype");
-    font-weight: bold;
-}
 
 
 
 /* RESET */
 * {outline:none}
-html {font-family:'NanumBarunGothic','poppins', 'Malgun Gothic','굴림',Gulim,'돋움',Dotum,Sans-serif; color:#333; -webkit-text-size-adjust:none;  font-size:16px; letter-spacing:-0.5px; font-weight:normal; -webkit-overflow-scrolling:touch; }
+html {font-family:'NanumGothic', 'Malgun Gothic','굴림',Gulim,'돋움',Dotum,Sans-serif; color:#333; -webkit-text-size-adjust:none;  font-size:16px; letter-spacing:-0.5px; font-weight:normal; -webkit-overflow-scrolling:touch; }
 html body {min-width:320px;}
 html body.ios {font-family:'Helvetica Neue', "Apple SD Gothic Neo";}
-html, body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, span, form, fieldset, input, select, label, textarea, table, caption, thead, tfoot, tbody, tr, th, td {margin:0;padding:0;-webkit-text-size-adjust:none; font-weight:normal;}
+html, body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, form, fieldset, input, select, label, textarea, table, caption, thead, tfoot, tbody, tr, th, td {margin:0;padding:0;-webkit-text-size-adjust:none; font-weight:inherit;}
 address {font-stretch:normal;}
 b, span, strong, input, a, button{font-size:inherit;font-family:inherit;color:inherit;  line-height:inherit;}
 article, aside, dialog, footer, header, section, footer, nav, figure, hgroup, details, summary, figure, figcaption {display: block;}
