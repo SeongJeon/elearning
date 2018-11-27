@@ -44,6 +44,7 @@
 </div>
 <script>
 	$(document).ready(function(){ 
+		// 동영상 플레이어 
 		$("#jquery_jplayer_1").jPlayer({
 			ready: function () {
 				$(this).jPlayer("setMedia", {
@@ -65,9 +66,9 @@
 			autoBlur: false,
 			smoothPlayBar: true,
 			keyEnabled: true,
-			remainingDuration: true,
 			toggleDuration: true,
 			verticalVolume: true,
+			preload: "auto",
 			ended: function() { 
 		   	$(".jp-play").removeClass("pause");
 			}
