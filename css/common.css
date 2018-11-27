@@ -38,21 +38,33 @@
 .jp-gui .jp-video-play button {overflow:hidden; position: absolute; top:0; left:0; width: 100%; height:610px; background: url(../images/common/btn-play.png) no-repeat 50% 50%; text-indent: -999em;}
 .jp-interface {display: inline-block; width: 640px; height: 60px; padding-top: 8px; position: absolute; left:192px; bottom:-60px; z-index: 1000; box-sizing: border-box}
 .jp-interface:after {display:block; clear:both; content:""}
+.jp-interface .timeline {margin-top: 13px; float: left;}
 .jp-progress {float:left;  width: 300px; height: 6px; margin-right: 10px; margin-top: 19px; border-radius: 5px; background: #9b9b9b;}
 .jp-progress .jp-seek-bar { height:100%; border-radius: 5px; background: #d6d6d6; border-radius: 5px;}
 .jp-progress  .jp-play-bar {position: relative;overflow:visible !important; height: 100%; border-radius: 5px; background: #fe7903; /* Old browsers */ background: -moz-linear-gradient(left, #fe7903 0%, #4a97c7 100%); /* FF3.6-15 */ background: -webkit-linear-gradient(left, #fe7903 0%,#4a97c7 100%); /* Chrome10-25,Safari5.1-6 */ background: linear-gradient(to right, #fe7903 0%,#4a97c7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fe7903', endColorstr='#4a97c7',GradientType=1 ); /* IE6-9 */ }
 .jp-progress .jp-play-bar:after {display:block; position: absolute; right:-7px; top:-4px; content:""; width: 15px; height: 15px; background: #4a97c7; border-radius: 100px; box-shadow: 0 0 6px rgba(0,0,0,0.25)}
-.jp-current-time {display: inline-block; vertical-align: top}
-.jp-duration {display: inline-block; vertical-align: top}
-.jp-controls-holder {display: inline-block; vertical-align: top}
+.jp-current-time {display: inline-block; vertical-align: top; font-size: 13px;}
+.jp-duration {display: inline-block; vertical-align: top; font-size: 13px;}
+.jp-duration:before {display: inline-block; content: "/"; margin-right: 5px }
+.jp-controls-holder {position:relative; float: right; width: 220px; vertical-align: top}
 .jp-controls-holder button {width: 44px; height: 44px; text-indent: -999em; background: url(../images/common/sp-img.png) no-repeat 0 0;}
-.jp-volume-controls {display: inline-block; vertical-align: top}
 .jp-details {display: none}
+.jp-volume-controls {position: absolute; right: 24px; top:13px; display: inline-block; vertical-align: top}
+/*.jp-volume-bar {position: absolute; left:0; bottom:100%;}*/
+.jp-toggles {position: absolute; right:0; top:13px;}
 button.jp-play {background-position: -100px 0;}
-button.jp-stop {background-position: -200px 0;}
+button.jp-play.pause {background-position: -200px 0;}
+button.jp-stop {background-position: -100px -50px;}
 button.jp-repeat {background-position: -300px 0;}
+button.jp-repeat.on {background-position: -300px -50px;}
 button.jp-full-screen {width:16px; height: 16px; background-position:0 -100px;}
+button.jp-full-screen.notfull {background-position:-50px -100px;}
 button.jp-mute {width:21px; height: 16px; background-position:0 -50px;}
-button.jp-mute:focus {background-position:-50px -50px;}
-.jp-volume-controls{position: relative;}
-.jp-volume-bar {position: absolute; left:0; bottom:100%;}
+button.jp-mute.on {background-position:-50px -50px;}
+button.btn-volumbar {width:21px; height: 16px; background-position:0 -50px;}
+.volume-bar-zone {display:none; position:absolute; bottom:100%; left:0; margin-bottom: 10px; padding:15px 9px 15px 7px; border:1px solid #d2d2d2; background: #ebebeb; z-index: 1;}
+.volume-bar-zone .jp-volume-bar {position:relative; height:65px;  width:3px; background: #d6d6d6; border-radius: 5px;}
+.volume-bar-zone .jp-volume-bar .jp-volume-bar-value {position:absolute; left:0; bottom:0; width:100%; border-radius:5px; background: #4a97c7; /* Old browsers */ background: -moz-linear-gradient(top, #4a97c7 0%, #fd7a05 100%); /* FF3.6-15 */ background: -webkit-linear-gradient(top, #4a97c7 0%,#fd7a05 100%); /* Chrome10-25,Safari5.1-6 */ background: linear-gradient(to bottom, #4a97c7 0%,#fd7a05 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4a97c7', endColorstr='#fd7a05',GradientType=0 ); /* IE6-9 */ }
+.volume-bar-zone .jp-volume-bar .jp-volume-bar-value:after {display: block; width: 9px; height: 9px; content:""; background: #4a97c7; border-radius: 100px; position: absolute; top:-3px;  left:-3px;}
+
+.jp-state-full-screen .jp-interface {bottom:0; left:0; width: 100%; background: #ebebeb; padding:8px 40px 0;}
