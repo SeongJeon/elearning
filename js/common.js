@@ -43,12 +43,16 @@ var fncControlsComponent = (function(){
 	// PAGER CONTROLS
 	$("#controlsPage button").on("click", function(){
 		if($(this).hasClass("next")){
-			if(current == maxNum-1) return false;
-			// 내용
-			current++;
-			$("#container").load("/elearning-publishing/html/" + jsonAry.fileName[current], function(){
-				$(".current", pager).text(current+1);
-			});
+			if(current == maxNum-1){
+				alert("학습이 완료되었습니다. 수고하셨습니다.");
+				window.close();
+			} else{
+				// 내용
+				current++;
+				$("#container").load("/elearning-publishing/html/" + jsonAry.fileName[current], function(){
+					$(".current", pager).text(current+1);
+				});
+			}
 
 		}else{
 			if(current == 0) return false;
