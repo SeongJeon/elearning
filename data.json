@@ -1,19 +1,42 @@
 {
 	"part1" : {
+		"name" : "영아기 뇌발달과 미디어",
 		"part" : 1,
-		"total" : 3,
+		"total" : 20,
 		"listName" : [
-			"1. 바보들의 반란1",
-			"1. 바보들의 반란2",
-			"1. 바보들의 반란3"
+			"1. 영아기 뇌 발달",
+			"2. 영아기 신경계 발달",
+			"3. 미디어 시대의 부모역할"
+		],
+		"listPage" : [
+			7, 12, 15
 		],
 		"fileName" : [
-			"test1-1.html",
-			"test1-2.html",
-			"test1-3.html"
+			"part01-1.html",
+			"part01-2.html",
+			"part01-3.html",
+			"part01-4.html",
+			"part01-5.html",
+			"part01-6.html",
+			"part01-7.html",
+			"part01-8.html",
+			"part01-9.html",
+			"part01-10.html",
+			"part01-11.html",
+			"part01-12.html",
+			"part01-13.html",
+			"part01-14.html",
+			"part01-15.html",
+			"part01-16.html",
+			"part01-17.html",
+			"part01-18.html",
+			"part01-19.html",
+			"part01-20.html"
 		]
 	},
+
 	"part2" : {
+		"name" : "문제행동별 지도방안",
 		"part" : 2,
 		"total" : 4,
 		"listName" : [
@@ -22,6 +45,9 @@
 			"2. 멍청이들의 반란3",
 			"2. 멍청이들의 반란4"
 		],
+		"listPage" : [
+			7, 11, 14
+		],
 		"fileName" : [
 			"test2-1.html",
 			"test2-2.html",
@@ -29,7 +55,9 @@
 			"test2-4.html"
 		]
 	},
+	
 	"part3" : {
+		"name" : 3,
 		"part" : 3,
 		"total" : 5,
 		"listName" : [
@@ -38,6 +66,9 @@
 			"3. 루저들의 반란3",
 			"3. 루저들의 반란4",
 			"3. 루저들의 반란5"
+		],
+		"listPage" : [
+			7, 11, 14
 		],
 		"fileName" : [
 			"test3-1.html",

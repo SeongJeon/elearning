@@ -12,28 +12,29 @@ CONTROLS COMPONENT JAVASCRIPT
 ----------------------------------------------------------------- */
 var fncControlsComponent = (function(){
 	var partNum = $("#container").attr("data-part"),
+		 partName = $("#container").attr("data-name"),
 		 partLst = $(".partListZone .partlist ol"),
 		 pager = $("#controlsPage .number"), 
 		 gnbBtn = $(".navZone .btn"),
 		 partLstBtn = $(".partListZone .btn"),
 		 current = 0, maxNum,  jsonAry=[], spd =300;
-		 // console.log(partNum);
+		 // console.log(partName);
 
 	// DEFAULT
 	pager.find('.current').text(current+1);
 	$.ajax({
 		type: "get",
-		url: './data.json',
+		url: '../data.json',
 		dataType: 'JSON',
 		success: function(data){
 			// DEFAULT
 			$.each(data, function(idx, val) {
 				if(this.part != partNum) return;
 				for(var i = 0 ; i < this.listName.length ; i++){
-					partLst.append('<li><a href="#">'+ this.listName[i] +'</a></li>');
+					partLst.append('<li><a href="#none" data-idx="'+ i +'">'+ this.listName[i] +'</a></li>');
 				}
 				pager.find('.max').text(this.total);
-				$("#container").load("/elearning-publishing/html/" + this.fileName[0]);
+				$("#container").load("/elearning-publishing/html/"+ partName + "/" + this.fileName[0]);
 				maxNum = this.total;
 				jsonAry = this;
 			});
@@ -49,7 +50,7 @@ var fncControlsComponent = (function(){
 			} else{
 				// 내용
 				current++;
-				$("#container").load("/elearning-publishing/html/" + jsonAry.fileName[current], function(){
+				$("#container").load("/elearning-publishing/html/" + partName + "/" + jsonAry.fileName[current], function(){
 					$(".current", pager).text(current+1);
 				});
 			}
@@ -58,7 +59,7 @@ var fncControlsComponent = (function(){
 			if(current == 0) return false;
 			// 내용
 			current--;
-			$("#container").load("/elearning-publishing/html/" + jsonAry.fileName[current], function(){
+			$("#container").load("/elearning-publishing/html/" + partName + "/" + jsonAry.fileName[current], function(){
 				$(".current", pager).text(current+1);
 			});
 		}
@@ -86,6 +87,15 @@ var fncControlsComponent = (function(){
 			$(".partlist").show();
 		}
 	})
+	$(document).on("click",".partlist .lst a", function(){
+		var _idx = $(this).attr("data-idx");
+		current = jsonAry.listPage[_idx];
+		$("#container").load("/elearning-publishing/html/" + partName + "/" + jsonAry.fileName[current], function(){
+				$(".current", pager).text(current+1);
+				partLstBtn.removeClass("open");
+				$(".partlist").hide();
+		});
+	});
 })();
 
 /* -----------------------------------------------------------------
