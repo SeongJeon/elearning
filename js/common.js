@@ -18,7 +18,6 @@ var fncControlsComponent = (function(){
 		 gnbBtn = $(".navZone .btn"),
 		 partLstBtn = $(".partListZone .btn"),
 		 current = 0, maxNum,  jsonAry=[], spd =300;
-		 // console.log(partName);
 
 	// DEFAULT
 	pager.find('.current').text(current+1);
@@ -87,13 +86,23 @@ var fncControlsComponent = (function(){
 			$(".partlist").show();
 		}
 	})
-	$(document).on("click",".partlist .lst a", function(){
-		var _idx = $(this).attr("data-idx");
-		current = jsonAry.listPage[_idx];
+	// $(document).on("click",".partlist .lst a", function(){
+	// 	var _idx = $(this).attr("data-idx");
+	// 	current = jsonAry.listPage[_idx];
+	// 	$("#container").load("/elearning-publishing/html/" + partName + "/" + jsonAry.fileName[current], function(){
+	// 			$(".current", pager).text(current+1);
+	// 			partLstBtn.removeClass("open");
+	// 			$(".partlist").hide();
+	// 	});
+	// });
+	$(document).on("click","#gnb a", function(e){
+		// e.preventdefault();
+		current = parseInt($(this).attr("data-idx"));
+		
 		$("#container").load("/elearning-publishing/html/" + partName + "/" + jsonAry.fileName[current], function(){
 				$(".current", pager).text(current+1);
-				partLstBtn.removeClass("open");
-				$(".partlist").hide();
+				gnbBtn.removeClass("open");
+				$("#gnb").hide();
 		});
 	});
 })();
