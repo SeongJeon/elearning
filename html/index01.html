@@ -12,7 +12,7 @@
 <body>
 	<div id="wrap">
 		<main>
-			<div id="container" data-part="1" data-name="part01"><!-- 파트별 숫자 적기  -->
+			<div id="container">
 				<!-- 내용 불러오는 곳 -->
 			</div>
 			<!-- 하단 컨트롤러  -->
@@ -21,23 +21,40 @@
 					<button type="button" title="주메뉴 열기" class="btn"><span>MENU</span></button>
 					<nav>
 						<div id="gnb">
+							<h2 class="tit icon1">들어가기</h2>
 							<ul>
 								<li><a href="#none" data-idx="1"><span>사전학습</span></a></li>
 								<li><a href="#none" data-idx="6"><span>학습목표</span></a></li>
-								<li><a href="#none" data-idx=""><span>정리 퀴즈</span></a></li>
-								<li><a href="#none" data-idx="19"><span>학습 정리</span></a></li>
-								<li><a href="#none" data-idx=""><span>보충 심화 학습</span></a></li>
+							</ul>
+							<h2 class="tit icon2">학습하기</h2>
+							<ul>
+								<li><a href="#none" data-idx="7"><span>영아기 뇌발달과 미디어 [이론1]</span></a></li>
+								<li><a href="#none" data-idx="9"><span>영아기 뇌발달과 미디어 [적용2]</span></a></li>
+							</ul>
+							<h2 class="tit icon3">확장하기</h2>
+							<ul>
+								<li><a href="#none" data-idx=""><span>궁금해요 Q &amp; A</span></a></li>
+								<li><a href="#none" data-idx=""><span>생각해보기</span></a></li>
+							</ul>
+							<h2 class="tit icon4">정리하기</h2>
+							<ul>
+								<li><a href="#none" data-idx="11"><span>정리 퀴즈</span></a></li>
+								<li><a href="#none" data-idx="15"><span>학습 정리</span></a></li>
+								<li><a href="#none" data-idx="14"><span>보충 심화 학습</span></a></li>
 								<li><a href="index02.html"><span>다음 차시</span></a></li>
 							</ul>
 						</div>
 					</nav>
 				</div>
-				<div class="partListZone">
+				<div class="optionZone">
 					<button type="button" title="목차 열기" class="btn"><span>목차</span></button>
-					<div class="partlist">
+					<div class="optionlist">
 						<nav>
-							<h2 class="tit">목차</h2>
-							<ol class="lst"></ol>
+							<ul>
+								<li><a href="#introducePop"><span>교수소개</span></a></li>
+								<li><a href="#bookDownPop"><span>교안다운</span></a></li>
+								<li><a href="#voiceDownPop"><span>음성강의</span></a></li>
+							</ul>
 						</nav>
 					</div>
 				</div>
@@ -54,9 +71,186 @@
 			</div>
 			<!--// 하단 컨트롤러  -->
 		</main>
+		
+		<!-- 페이지 컨텐츠  -->
+		<div class="contLst">
+			<!-- page1 메인 -->
+			<div class="part01-1 cont">
+				<p class="subtit">1.뇌발달 살림</p>
+				<h1><span class="br">영아기</span><span class="point1">뇌발달과</span> <span class="point2">미디어</span></h1>
+				<p class="name">강사 : 정미현</p>
+				<p class="img"><img src="../images/part01/img-t.png" alt=""></p>
+			</div>
+			<!-- page2 사전학습 -->
+			<div class="part01-2 cont">
+				<img src="../images/part01/p1_p2.png" alt="">
+			</div>
+			<!-- page3 -->
+			<div class="part01-3 cont">
+				<img src="../images/part01/p1_p3.png" alt="">
+			</div>
+			<!-- page4 -->
+			<div class="part01-4 cont">
+				<img src="../images/part01/p1_p4.png" alt="">
+			</div>
+			<!-- page5 -->
+			<div class="part01-5 cont">
+				<img src="../images/part01/p1_p5.png" alt="">
+			</div>
+			<!-- page6 -->
+			<div class="part01-6 cont">
+				<img src="../images/part01/p1_p6.png" alt="">
+			</div>
+			<!-- page7 학습목표 -->
+			<div class="part01-7 cont">
+				<img src="../images/part01/p1_p7.png" alt="">
+			</div>
+			<!-- page8 학습하기 - 이론 표지 -->
+			<div class="part01-8 cont">
+				<img src="../images/part01/p1_p8.png" alt="">
+			</div>
+			<!-- page9 이론 동영상 -->
+			<div class="part01-9 cont">
+				<img src="../images/part01/p1_p9.png" alt="">
+			</div>
+			<!-- page10 학습하기 - 적용 표지 -->
+			<div class="part01-10 cont">
+				<img src="../images/part01/p1_p10.png" alt="">
+			</div>
+			<!-- page11 적용 동영상 -->
+			<div class="part01-11 cont">
+				<img src="../images/part01/p1_p11.png" alt="">
+			</div>
+			<!-- page12 퀴즈1 -->
+			<div class="part01-12 quizCont cont">
+				<h2>정리 <span>QUIZ</span></h2>
+				<p class="quiz"><em class="num">Q1</em>대뇌피질 중 종합적 사고기능을 담당하고 있으며 인간의 뇌의 40%를 <br>차지하고 있는 것은?</p>
+				<ul class="answerlst">
+					<li><button type='button' class="answer">① 전두엽</button></li>
+					<li><button type='button'>② 후두엽</button></li>
+					<li><button type='button'>③ 두정엽</button></li>
+					<li><button type='button'>④ 측두엽</button></li>
+				</ul>
+				<div class="answerzone">
+					<p class="answerTix"><span>정답 :</span> ① 전두엽</p>
+					<p class="txt">종합적 사고, 예측, 판단, 추리의 역할을 담당한다. 영아기의 과도한 TV시청등은 전두엽을 손상시킨다.</p>
+				</div>
+			</div>
+			<!-- page13 퀴즈2 -->
+			<div class="part01-13 quizCont cont">
+				<h2>정리 <span>QUIZ</span></h2>
+				<p class="quiz"><em class="num">Q2</em>호흡, 수면, 의식과 관련이 있으며 반사운동과 신체기능을 통제하는 <br>역할을 하고, 출생 시 이미 완전한 기능을 하는 곳은?</p>
+				<ul class="answerlst">
+					<li><button type='button'>① 소뇌</button></li>
+					<li><button type='button' class="answer">② 뇌간</button></li>
+					<li><button type='button'>③ 해마</button></li>
+					<li><button type='button'>④ 편도체</button></li>
+				</ul>
+				<div class="answerzone">
+					<p class="answerTix"><span>정답 :</span> ② 뇌간</p>
+					<p class="txt">뇌간은 호흡과 관련있으므로 출생 시부터 완전히 기능하고 있으며, 제대로 기능하지 못한다면 살 수 없다.</p>
+				</div>
+			</div>
+			<!-- page14 퀴즈3 -->
+			<div class="part01-14 quizCont cont">
+				<h2>정리 <span>QUIZ</span></h2>
+				<p class="quiz"><em class="num">Q3</em>생후 6개월의 영아는 성인보다 더 많은 시냅스를 가지고 있다가 어떤 <br>경험을 하느냐에 따라 필요 없는 시냅스는 소멸되는데 이는 어떤 현상인가? </p>
+				<ul class="answerlst">
+					<li><button type='button'>① 추가하기</button></li>
+					<li><button type='button'>② 소멸하기</button></li>
+					<li><button type='button' class="answer">③ 가지치기</button></li>
+					<li><button type='button'>④ 통합하기</button></li>
+				</ul>
+				<div class="answerzone">
+					<p class="answerTix"><span>정답 :</span> ③ 가지치기</p>
+					<p class="txt">가지치기를 통해 필요한 신경세포를 남긴다.</p>
+				</div>
+			</div>
+			<!-- page15 보충심화학습(아이프레임) -->
+			<div class="part01-15 cont">
+				<h2 class="pagetit">보충심화학습</h2>
+				<p class="txt">학습 후 보충 심화 학습자료를 확인해보세요.</p>
+				<div class="iframe">
+					<iframe src="http://www.nate.com" frameborder="0"></iframe>
+				</div>
+			</div>
+			<!-- page16 정리하기 -->
+			<div class="part01-16 cont">
+				<img src="../images/part01/p1_p16.png" alt="">
+			</div>
+			<!-- page17 마지막 페이지 -->
+			<div class="part01-17 lastpage cont">
+				<p class="currentpart">영아기 뇌발달과 미디어</p>
+				<p class="nextpart"><span class="br">영아의</span><span class="point1">자유놀이와</span> <span class="point2">교사의 역할</span></p>
+			</div>
+		</div>
+		<!--// 페이지 컨텐츠  -->
+
+		<!-- 교수소개 팝업 -->
+		<div id="introducePop" class="popup">
+			<div class="introduce-zone">
+				<h2 class="tit">교수소개</h2>
+				<p class="name">정미현 교수님</p>
+				<dl class="lst">
+					<dt>경력 및 학력</dt>
+					<dd>현) 남서울실용전문학교 전임교수</dd> 
+					<dd>전) 고려대학교 아동발달 교수</dd> 
+					<dd>전) 상명대학교 영아교수법 교수</dd>
+					<dd>고려대학교 가정학과 아동학 박사수료</dd>
+				</dl>
+			</div>
+			<div class="img-zone">
+				<img src="../images/part01/img-t2.png" alt="정미현 교수님">
+			</div>
+			<div class="closebtn"><button type="button">교수소개 닫기</button></div>
+		</div>
+		<!-- //교수소개 팝업 -->
+
+		<!-- 교안 다운로드 팝업 -->
+		<div id="bookDownPop" class="popup">
+			<div class="inner-zone">
+				<h2 class="tit">교안 다운로드</h2>
+				<h3 class="classname">영아기 뇌발달과 미디어</h3>
+				<p class="txt">교안 PDF를 다운로드하여 학습하시겠습니까? </p>
+				<ul class="btn-group">
+					<li><a href="#" target="_blank" title="다운로드">이론 PDF</a></li>
+					<li><a href="#" target="_blank" title="다운로드">적용 PDF</a></li>
+				</ul>
+			</div>
+			<div class="closebtn"><button type="button">음성강의 다운로드 닫기</button></div>
+		</div>
+		<!-- //교안 다운로드 팝업-->
+
+		<!-- 음성강의 다운로드 팝업 -->
+		<div id="voiceDownPop" class="popup">
+			<div class="inner-zone">
+				<h2 class="tit">음성강의 다운로드</h2>
+				<h3 class="classname">영아기 뇌발달과 미디어</h3>
+				<p class="txt">음성 강의 MP3를 다운로드하여 학습하시겠습니까? </p>
+				<ul class="btn-group">
+					<li><a href="#" target="_blank" title="다운로드">이론 MP3</a></li>
+					<li><a href="#" target="_blank" title="다운로드">적용 MP3</a></li>
+				</ul>
+			</div>
+			<div class="closebtn"><button type="button">음성강의 다운로드 닫기</button></div>
+		</div>
+		<!-- //음성강의 다운로드 팝업-->
 	</div>
-	<script src="../js/jquery-1.11.3.min.js"></script>
-	<script src="../js/jquery.jplayer.min.js"></script>
-	<script src="../js/common.js"></script>
+
+<script src="../js/jquery-1.11.3.min.js"></script>
+<script src="../js/jquery.jplayer.min.js"></script>
+<script src="../js/common.js"></script>
+<script>
+	// 정리 퀴드
+	$(document).on("click", ".quizCont .answerlst button", function(){
+		var answer = $(this).closest(".quizCont").find(".answerzone");
+
+		$(this).addClass("selected").closest("li").siblings().find("button").removeClass("selected shake");
+
+		if($(this).hasClass("answer")) answer.fadeIn(200);
+		else $(this).addClass("shake");
+	})
+	
+</script>
 </body>
 </html>

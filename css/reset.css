@@ -1,6 +1,18 @@
 @charset "utf-8";
 
 
+@font-face { 
+    font-family: 'Binggrae'; 
+    src: url('../fonts/Binggrae.woff') format('woff'),
+    url("../fonts/Binggrae.ttf") format("truetype");
+    font-weight: normal; 
+}
+@font-face { 
+    font-family: 'Binggrae'; 
+    src: url('../fonts/Binggrae-Bold.woff') format('woff'),
+    url("../fonts/Binggrae-Bold.ttf") format("truetype");
+    font-weight: bold; 
+}
 
 /* FONTS */
 @font-face {
@@ -36,7 +48,7 @@
 
 /* RESET */
 * {outline:none}
-html {font-family:'NanumGothic', 'Malgun Gothic','굴림',Gulim,'돋움',Dotum,Sans-serif; color:#333; -webkit-text-size-adjust:none;  font-size:16px; letter-spacing:-0.5px; font-weight:normal; -webkit-overflow-scrolling:touch; }
+html {font-family:'NanumGothic', 'Malgun Gothic','굴림',Gulim,'돋움',Dotum,Sans-serif; color:#6a6a6a; -webkit-text-size-adjust:none;  font-size:16px; letter-spacing:-0.5px; font-weight:normal; -webkit-overflow-scrolling:touch; }
 html body {min-width:320px;}
 html body.ios {font-family:'Helvetica Neue', "Apple SD Gothic Neo";}
 html, body, div, h1, h2, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, form, fieldset, input, select, label, textarea, table, caption, thead, tfoot, tbody, tr, th, td {margin:0;padding:0;-webkit-text-size-adjust:none; font-weight:inherit;}
