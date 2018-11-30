@@ -172,7 +172,7 @@ div[id*="DownPop"] .btn-group li:last-child a {background: #4a97c7; border-color
 /* 마지막 페이지 */
 .lastpage {background: url(../images/part01/last.png) no-repeat 50% 50%; text-align: center; font-family: "Binggrae";}
 .lastpage .currentpart {padding-top: 130px; color:#838383; font-size: 25px; font-weight: bold;}
-.lastpage .nextpart {margin-top: 105px;color: #3d3d3d; font-size: 40px;}
+.lastpage .nextpart {margin-top: 105px;color: #3d3d3d; font-size: 40px; font-weight: bold;}
 .lastpage .nextpart .br {display: block;}
 .lastpage .nextpart .point1 {color: #138fdd}
 .lastpage .nextpart .point2 {color: #20a1c6;}
