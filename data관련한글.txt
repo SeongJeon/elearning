@@ -1,7 +1,0 @@
-json.data
-name - 교육 차수 이름
-part - 파트 임시 부여 번호
-total - 총 페이지 수
-listName - 목차
-listPage - 목차 인덱스, 현재페이지 숫자에서 -1 해서 넣으면 됨
-fileName - 순서대로 내용 파일 이름
