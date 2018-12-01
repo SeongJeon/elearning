@@ -18,34 +18,36 @@ var fncControlsComponent = (function(){
 	var current = 0, spd =300,
 		 maxNum =  $(".cont", cont).length, html;
 
-		 // console.log(maxNum);
 	// DEFAULT
 	pager.find('.current').text(current+1);
 	pager.find('.max').text(maxNum-1);
-	$(".contLst .cont").each(function(i){
+	$(".contLst > .cont").each(function(i){
 		$(this).attr("data-cont", i);
 		if(i==0){
 			$(this).clone().appendTo("#container");
 		}
 	})
-	// $.ajax({
-	// 	type: "get",
-	// 	url: '../data.json',
-	// 	dataType: 'JSON',
-	// 	success: function(data){
-	// 		// DEFAULT
-	// 		$.each(data, function(idx, val) {
-	// 			if(this.part != partNum) return;
-	// 			for(var i = 0 ; i < this.listName.length ; i++){
-	// 				// partLst.append('<li><a href="#none" data-idx="'+ i +'">'+ this.listName[i] +'</a></li>');
-	// 			}
-	// 			pager.find('.max').text(this.total);
-	// 			$("#container").load("/elearning-publishing/html/"+ partName + "/" + this.fileName[0]);
-	// 			maxNum = this.total;
-	// 			jsonAry = this;
-	// 		});
-	// 	}
-	// });
+
+	/*
+	$.ajax({
+		type: "get",
+		url: '../data.json',
+		dataType: 'JSON',
+		success: function(data){
+			// DEFAULT
+			$.each(data, function(idx, val) {
+				if(this.part != partNum) return;
+				for(var i = 0 ; i < this.listName.length ; i++){
+					// partLst.append('<li><a href="#none" data-idx="'+ i +'">'+ this.listName[i] +'</a></li>');
+				}
+				pager.find('.max').text(this.total);
+				$("#container").load("/elearning-publishing/html/"+ partName + "/" + this.fileName[0]);
+				maxNum = this.total;
+				jsonAry = this;
+			});
+		}
+	});
+	*/
 
 	// PAGER CONTROLS
 	$("#controlsPage button").on("click", function(){

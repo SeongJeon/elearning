@@ -1,46 +1,53 @@
 @charset "utf-8";
 
-
-@font-face { 
-    font-family: 'Binggrae'; 
-    src: url('../fonts/Binggrae.woff') format('woff'),
-    url("../fonts/Binggrae.ttf") format("truetype");
-    font-weight: normal; 
-}
-@font-face { 
-    font-family: 'Binggrae'; 
-    src: url('../fonts/Binggrae-Bold.woff') format('woff'),
-    url("../fonts/Binggrae-Bold.ttf") format("truetype");
-    font-weight: bold; 
-}
-
 /* FONTS */
-@font-face {
-    font-family: "NanumGothic";
-    font-weight: normal;
-    src: url("../fonts/NanumGothic-Regular.eot");
-    src: url("../fonts/NanumGothic-Regular.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/NanumGothic-Regular.woff") format("woff"),
-    url("../fonts/NanumGothic-Regular.ttf") format("truetype");
+@font-face { 
+	font-family: 'Binggrae'; 
+	src: url('../fonts/Binggrae.woff') format('woff'),
+	url("../fonts/Binggrae.ttf") format("truetype");
+	font-weight: normal; 
+}
+@font-face { 
+	font-family: 'Binggrae'; 
+	src: url('../fonts/Binggrae-Bold.woff') format('woff'),
+	url("../fonts/Binggrae-Bold.ttf") format("truetype");
+	font-weight: bold; 
 }
 
 
 @font-face {
-    font-family: "NanumGothic";
-    font-weight: 500;
-    src: url("../fonts/NanumGothic-ExtraBold.eot");
-    src: url("../fonts/NanumGothic-ExtraBold.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/NanumGothic-ExtraBold.woff") format("woff"),
-    url("../fonts/NanumGothic-ExtraBold.ttf") format("truetype");
+	font-family: "NanumbarunGothic";
+	font-weight: bold;
+	src: url("../fonts/NanumBarunGothicBold.eot");
+	src: url("../fonts/NanumBarunGothicBold.eot?#iefix") format("embedded-opentype"),
+	url("../fonts/NanumBarunGothicBold.woff") format("woff"),
+	url("../fonts/NanumBarunGothicBold.ttf") format("truetype");
 }
 
+
 @font-face {
-    font-family: "NanumGothic";
-    font-weight: bold;
-    src: url("../fonts/NanumGothic-Bold.eot");
-    src: url("../fonts/NanumGothic-Bold.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/NanumGothic-Bold.woff") format("woff"),
-    url("../fonts/NanumGothic-Bold.ttf") format("truetype");
+	font-family: "NanumGothic";
+	font-weight: normal;
+	src: url("../fonts/NanumGothic-Regular.eot");
+	src: url("../fonts/NanumGothic-Regular.eot?#iefix") format("embedded-opentype"),
+	url("../fonts/NanumGothic-Regular.woff") format("woff"),
+	url("../fonts/NanumGothic-Regular.ttf") format("truetype");
+}
+@font-face {
+	font-family: "NanumGothic";
+	font-weight: 500;
+	src: url("../fonts/NanumGothic-ExtraBold.eot");
+	src: url("../fonts/NanumGothic-ExtraBold.eot?#iefix") format("embedded-opentype"),
+	url("../fonts/NanumGothic-ExtraBold.woff") format("woff"),
+	url("../fonts/NanumGothic-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+	font-family: "NanumGothic";
+	font-weight: bold;
+	src: url("../fonts/NanumGothic-Bold.eot");
+	src: url("../fonts/NanumGothic-Bold.eot?#iefix") format("embedded-opentype"),
+	url("../fonts/NanumGothic-Bold.woff") format("woff"),
+	url("../fonts/NanumGothic-Bold.ttf") format("truetype");
 }
 
 
@@ -76,10 +83,10 @@ strong {font-weight:normal;}
 select {-webkit-appearance: none; -moz-appearance: none; appearance: none;}
 a, button, input {outline:none;}
 input {
-    &::-webkit-input-placeholder { color: #fff; }
-    &::-moz-placeholder { color: #fff; }
-    &:-ms-input-placeholder { color: #fff; }
-    &:-moz-placeholder { color: #fff; }
+	&::-webkit-input-placeholder { color: #fff; }
+	&::-moz-placeholder { color: #fff; }
+	&:-ms-input-placeholder { color: #fff; }
+	&:-moz-placeholder { color: #fff; }
 }
 caption {overflow:hidden; visibility:hidden; height:0; text-indent:-9999em;}
 

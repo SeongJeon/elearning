@@ -227,13 +227,13 @@ div.posterpage[class*="part03-"] .classname .point1 {color:#2a89cc;}
 	.part01-1 .name {position:relative; color: #272727; font-size: 30px; font-weight: bold; padding-top: 28px; margin-top: 18px;}
 	.part01-1 .name:before {display: block;  position: absolute; left:50%; top:0; content: ""; width: 36px; height: 3px; margin-left: -18px; background: #4d4d4d}
 	.part01-1 .img {margin-top: 30px}
-.part01-15 {background: #f6f6f6 url(../images/part01/p1_15.png) no-repeat 50% 0; text-align: center;}
-	.part01-15 .pagetit {padding-top: 69px}
-	.part01-15 .txt {margin-top: 4px; color:#3d3d3d; font-size: 20px; text-align: center;}
-	.part01-15 .iframe {width: 812px; margin:10px auto 0; overflow: hidden; height: 400px; border:1px solid #e2e2e2; background: #fff}
-	.part01-15 .iframe iframe {width:100%; height:1000px;}
-.part01-8:before {width: 100%; height: 100px; display: block; content: ""; background: url(../images/part02/p2_p5.png) no-repeat 50% 0;}
-.part01-10:before {width: 100%; height: 100px; display: block; content: ""; background: url(../images/part02/p2_p12.png) no-repeat 50% 0;}
+.part01-11 {background: #f6f6f6 url(../images/part01/p1_15.png) no-repeat 50% 0; text-align: center;}
+	.part01-11 .pagetit {padding-top: 69px}
+	.part01-11 .txt {margin-top: 4px; color:#3d3d3d; font-size: 20px; text-align: center;}
+	.part01-11 .iframe {width: 812px; margin:10px auto 0; overflow: hidden; height: 400px; border:1px solid #e2e2e2; background: #fff}
+	.part01-11 .iframe iframe {width:100%; height:1000px;}
+.part01-4:before {width: 100%; height: 100px; display: block; content: ""; background: url(../images/part02/p2_p5.png) no-repeat 50% 0;}
+.part01-6:before {width: 100%; height: 100px; display: block; content: ""; background: url(../images/part02/p2_p12.png) no-repeat 50% 0;}
 
 div.quizCont[class*="part01-"] {background: url(../images/part01/bg-quiz.jpg) no-repeat 50% 50%; }
 div.quizCont[class*="part01-"] .quiz .num {top: 10px; margin-top: 0;}
@@ -247,18 +247,37 @@ div.quizCont[class*="part01-"] .quiz .num {top: 10px; margin-top: 0;}
 	.part02-1 .name {position:relative; color: #272727; font-size: 30px; font-weight: bold; padding-top: 28px; margin-top: 18px;}
 	.part02-1 .name:before {display: block;  position: absolute; left:50%; top:0; content: ""; width: 36px; height: 3px; margin-left: -18px; background: #4d4d4d}
 	.part02-1 .img {margin-top: 30px}
-.part02-26 {background: #f6f6f6 url(../images/part02/p2_26.png) no-repeat 50% 0; text-align: center;}
-	.part02-26 .pagetit {padding-top: 69px}
-	.part02-26 .txt {margin-top: 4px; color:#3d3d3d; font-size: 20px; text-align: center;}
-	.part02-26 .iframe {width: 812px; margin:10px auto 0; overflow: hidden; height: 400px; border:1px solid #e2e2e2; background: #fff}
-	.part02-26 .iframe iframe {width:100%; height:1000px;}
-.part02-5:before {width: 100%; height: 100px; display: block; content: ""; background: url(../images/part02/p2_p5.png) no-repeat 50% 0;}
-.part02-12:before {width: 100%; height: 100px; display: block; content: ""; background: url(../images/part02/p2_p12.png) no-repeat 50% 0;}
+.part02-25 {background: #f6f6f6 url(../images/part02/p2_26.png) no-repeat 50% 0; text-align: center;}
+	.part02-25 .pagetit {padding-top: 69px}
+	.part02-25 .txt {margin-top: 4px; color:#3d3d3d; font-size: 20px; text-align: center;}
+	.part02-25 .iframe {width: 812px; margin:10px auto 0; overflow: hidden; height: 400px; border:1px solid #e2e2e2; background: #fff}
+	.part02-25 .iframe iframe {width:100%; height:1000px;}
+.part02-4:before {width: 100%; height: 100px; display: block; content: ""; background: url(../images/part02/p2_p5.png) no-repeat 50% 0;}
+.part02-11:before {width: 100%; height: 100px; display: block; content: ""; background: url(../images/part02/p2_p12.png) no-repeat 50% 0;}
+.part02-2 {background: url(../images/part02/bg-before.jpg) no-repeat 50% 0; }
+	.part02-2 .quiztit {position:relative; margin-top: 170px; font-weight: bold; font-size: 45px; font-family: 'Binggrae'; color: #fff; text-align: center;}
+	.part02-2 .quiztit:before {display: inline-block;  width: 17px; height: 28px; margin-right: 10px; background: url(../images/part02/p2_2_img.png) no-repeat 0 0; content: ""; vertical-align: top; margin-left: -27px}
+	.part02-2 .desc {font-size: 20px; color:#fff; text-align: center; text-shadow: 0 1px 2px  rgba(0,0,0,0.4)}
+	.part02-2 .form {text-align: center; margin-top: 48px;}
+	.part02-2 .tit {display: inline-block; position: relative; top:-8px; width: 59px; height: 67px; background: url(../images/part02/p2_p2_icon.png) no-repeat 0 0; text-indent: -999em;}
+
+	.part02-2-1 .formbox {display: inline-block; vertical-align: top}
+	.part02-2-1 .formbox:after {display:block; clear:both; content:""}
+	.part02-2-1 .form textarea {float: left; width: 615px; height: 150px; padding: 15px 20px; background: #fff; resize:none;  box-sizing: border-box; font-family: "NanumGothic"; font-size: 16px; line-height: 1.4; text-align: left; border: 1px solid #2070a8; border-right: 0;}
+	.part02-2-1 .form textarea::-webkit-input-placeholder { color: #a4a4a4; }
+	.part02-2-1 .form textarea::-moz-placeholder { color: #a4a4a4; }
+	.part02-2-1 .form textarea:-ms-input-placeholder { color: #a4a4a4; }
+	.part02-2-1 .form textarea:-moz-placeholder { color: #a4a4a4; }
+	.part02-2-1 .form button {float: left; width: 140px; height: 150px; background: url(../images/part02/p2_2_btn.png) no-repeat 0 0; box-shadow: 0 0 7px rgba(0,0,0,0.4); text-indent: -999em; vertical-align: top}
+.part02-2-2 {display: none; }
+	.part02-2-2 .quiztit {margin-top: 100px; font-weight: bold; font-size: 45px; font-family: 'Binggrae'; color: #fff; text-align: center;}
+	.part02-2-2 .img {text-align: center;  margin-top: 42px;}
+
 
 div.quizCont[class*="part02-"] {background: url(../images/part02/bg-quiz.jpg) no-repeat 50% 50%; }
 	div.quizCont[class*="part02-"] .answerlst.row button {border-color:#9dcae8;}
 	div.quizCont[class*="part02-"] .answerlst.row button.selected {border-color:#ec5665;}
-	div.quizCont[class*="part02-25"] .answerlst.row li:nth-child(3) button {letter-spacing: -1.2px}
-	div.quizCont[class*="part02-25"] .answerzone {height: 150px; margin-top: 20px;}
-	div.quizCont[class*="part02-25"] .answerzone > div {height: 150px;}
+	div.quizCont[class*="part02-24"] .answerlst.row li:nth-child(3) button {letter-spacing: -1.2px}
+	div.quizCont[class*="part02-24"] .answerzone {height: 150px; margin-top: 20px;}
+	div.quizCont[class*="part02-24"] .answerzone > div {height: 150px;}
 
