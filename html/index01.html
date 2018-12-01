@@ -83,23 +83,47 @@
 			</div>
 			<!-- page2 사전학습 -->
 			<div class="part01-2 cont">
-				<img src="../images/part01/p1_p2.png" alt="">
+				<h2 class="quiztit"><div><span class="color2">영아기 부모</span>들로부터 <span class="color1">다음과 같은 질문</span>을 받게 된다면 </div>어떻게 대답하시겠습니까?</h2>
+				<p class="desc">질문을 선택하여 읽어보고, 답변을 생각해본 후, 전문가 의견을 확인해 보세요.</p>
+				<div class="change-zone">
+					<!-- 질문 목록 -->
+					<div class="part01-1-1">
+						<ul class="quizlst">
+							<li><button type="button">Q1</button></li>
+							<li><button type="button">Q2</button></li>
+							<li><button type="button">Q3</button></li>
+						</ul>
+					</div>
+					<!-- 교수답변 -->
+					<div class="part01-1-2">
+						<p class="img"><img src="../images/part01/p1_p6.png" alt=""></p>	
+					</div>
+				</div>
+				<div class="form">
+					<strong class="answer">A</strong>
+					<div class="formbox">
+						<input type="text" placeholder="답변을 써주세요">
+						<button type="button"><span>전문가 의견 확인</span></button>
+					</div>
+				</div>
+
+				<!-- <img src="../images/part01/p1_p2.png" alt=""> -->
 				<!-- page3 -->
-				<div class="part01-3">
+				<!-- <div class="part01-3" ste>
 					<img src="../images/part01/p1_p3.png" alt="">
-				</div>
+				</div> -->
 				<!-- page4 -->
-				<div class="part01-4">
+				<!-- <div class="part01-4">
 					<img src="../images/part01/p1_p4.png" alt="">
-				</div>
+				</div> -->
 				<!-- page5 -->
-				<div class="part01-5">
+				<!-- <div class="part01-5">
 					<img src="../images/part01/p1_p5.png" alt="">
-				</div>
+				</div> -->
 				<!-- page6 -->
-				<div class="part01-6">
+				<!-- <div class="part01-6">
 					<img src="../images/part01/p1_p6.png" alt="">
-				</div>
+				</div> -->
 			</div>
 			<!-- page3 학습목표 -->
 			<div class="part01-3 cont">
@@ -251,14 +275,31 @@
 <script src="../js/jquery.jplayer.min.js"></script>
 <script src="../js/common.js"></script>
 <script>
-	// 정리 퀴드
-	$(document).on("click", ".quizCont .answerlst button", function(){
+	var doc = $(document);
+
+	// 정리 퀴즈
+	doc.on("click", ".quizCont .answerlst button", function(){
 		var answer = $(this).closest(".quizCont").find(".answerzone");
 
 		$(this).addClass("selected").closest("li").siblings().find("button").removeClass("selected shake");
 
 		if($(this).hasClass("answer")) answer.fadeIn(200);
 		else $(this).addClass("shake");
+	})
+
+	// 사전학습 퀴즈	
+	doc.on("click", ".part01-2 .form button", function(){
+		var tt = $(this).prev("input").val().length, 
+		    change = $(this).closest(".part01-2").find(".change-zone");
+		if(tt <= 0){
+			alert("답변을 쓰신 후 전문가 의견을 확인해주세요.");
+		}else{
+			$(this).closest(".part01-2").find(".form").hide();
+			change.find(">div").hide();
+			change.find(".part01-1-2").show();
+			// $(this).closest(".part01-2-1").hide();
+			// $(this).closest(".part01-2-1").next(".part02-2-2").show();
+		}	
 	})
 	
 </script>
