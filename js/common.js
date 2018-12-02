@@ -5,8 +5,6 @@ if(navigator.userAgent.match(/Mobile|iP(hone|od)|BlackBerry|IEMobile|Kindle|NetF
 }else{$("body").addClass("pc"); }
 
 
-var elearning = {};
-
 /* -----------------------------------------------------------------
 CONTROLS COMPONENT JAVASCRIPT
 ----------------------------------------------------------------- */
@@ -20,7 +18,7 @@ var fncControlsComponent = (function(){
 
 	// DEFAULT
 	pager.find('.current').text(current+1);
-	pager.find('.max').text(maxNum-1);
+	pager.find('.max').text(maxNum);
 	$(".contLst > .cont").each(function(i){
 		$(this).attr("data-cont", i);
 		if(i==0){
@@ -63,8 +61,10 @@ var fncControlsComponent = (function(){
 		}
 		html = $('.cont', cont).filter("[data-cont="+current+"]").clone();
 		container.html(html);
-
-		if(current != maxNum-1) $(".current", pager).text(current+1);
+		gnbBtn.removeClass("open");
+		$("#gnb").hide();
+		jplayer();
+		$(".current", pager).text(current+1);
 	})
 
 	// navZone CONTROLS
@@ -102,12 +102,14 @@ var fncControlsComponent = (function(){
 	// OPTION MENU CLICK
 	$(".optionlist a").on("click", function(){
 		var pop = $(this).attr("href");
+		$("#wrap").append("<span class='dim'></span>");
 		$(pop).show();
 		optLstBtn.removeClass("open");
 		$(".optionlist").hide();
 		return false;
 	})
 	$(".popup .closebtn").on("click", function(){
+		$("#wrap .dim").remove();
 		$(this).closest(".popup").hide();
 	})
 	// GNB - INDEX MENU CLICK
@@ -123,7 +125,61 @@ var fncControlsComponent = (function(){
 })();
 
 /* -----------------------------------------------------------------
-DOCUMENT READY
+PLAYER
 ----------------------------------------------------------------- */
-$(document).ready(function(){
-})
+function jplayer() {
+	// 동영상 플레이어 
+	$("#jquery_jplayer_1").jPlayer({
+		ready: function () {
+			$(this).jPlayer("setMedia", {
+				title: "Big Buck Bunny",
+				m4v: "http://www.jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v",
+				ogv: "http://www.jplayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv",
+				webmv: "http://www.jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm",
+				poster: "http://www.jplayer.org/video/poster/Big_Buck_Bunny_Trailer_480x270.png"
+			});
+		},
+		swfPath: "../dist/jplayer",
+		supplied: "webmv, ogv, m4v",
+		size: {
+			width: "100%",
+			height: "610",
+			cssClass: "jp-video-360p"
+		},
+		useStateClassSkin: true,
+		autoBlur: false,
+		smoothPlayBar: true,
+		keyEnabled: true,
+		toggleDuration: true,
+		verticalVolume: true,
+		preload: "auto",
+		ended: function() { 
+	   	$(".jp-play").removeClass("pause");
+		}
+	});
+
+	$(".jp-mute").on("click", function(){
+		$(this).toggleClass("on");
+	})		
+	$(".jp-play").on("click", function(){
+		$(this).toggleClass("pause");
+	})		
+	$(".jp-stop").on("click", function(){
+		$(".jp-play").removeClass("pause");
+	})	
+	$(".jp-repeat").on("click", function(){
+		$(this).toggleClass("on");
+	})
+	$(".btn-volumbar").on("click", function(){
+		if($(this).hasClass("open")) $(".volume-bar-zone").hide();
+		else $(".volume-bar-zone").show();
+
+		$(this).toggleClass("open");
+	})
+	$(".jp-full-screen").on("click", function(){
+		$(this).toggleClass("notfull");
+	})
+	$(".jp-video-play").on("click", function(){
+		$(".jp-play").addClass("pause");
+	})
+}
