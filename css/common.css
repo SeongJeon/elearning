@@ -294,7 +294,6 @@ div.quizCont[class*="part01-"] .quiz .num {top: 10px; margin-top: 0;}
 div[class*='part02'] .location:after {width: 118px; height: 25px; background: url(../images/part02/img_icon.png) no-repeat 0 0}
 div[class*='part02-2'] .location:after {background: url(../images/part02/img_icon2.png) no-repeat 0 0}
 
-
 .part02-1 {background: url(../images/part02/bg-main.jpg) no-repeat 50% 50%; text-align: center; }
 .part02-1 h1 {padding-top: 110px; color:#4c4c4c; font-size: 90px; line-height: 100px; font-family: "Binggrae"; font-weight: bold;}
 .part02-1 h1 .br {display: block}
@@ -319,16 +318,16 @@ div[class*='part02-2'] .location:after {background: url(../images/part02/img_ico
 .part02-2-2 {display: none;  }
 .part02-2-2 .quiztit {margin-top: 100px; font-weight: bold; font-size: 45px; font-family: 'Binggrae'; color: #fff; text-align: center;}
 .part02-2-2 .img {text-align: center;  margin-top: 42px;}
-.part02-25 {background: #f6f6f6; text-align: center;}
-.part02-25 .pagetit {padding-top: 69px}
-.part02-25 .txt {margin-top: 4px; color:#3d3d3d; font-size: 20px; text-align: center;}
+.part02-9 {background: #f6f6f6; text-align: center;}
+.part02-9 .pagetit {padding-top: 69px}
+.part02-9 .txt {margin-top: 4px; color:#3d3d3d; font-size: 20px; text-align: center;}
 
 div.quizCont[class*="part02-"] {background: url(../images/part02/bg-quiz.jpg) no-repeat 50% 50%; }
 	div.quizCont[class*="part02-"] .answerlst.row button {border-color:#9dcae8;}
 	div.quizCont[class*="part02-"] .answerlst.row button.selected {border-color:#ec5665;}
-	div.quizCont[class*="part02-24"] .answerlst.row li:nth-child(3) button {letter-spacing: -1.2px}
-	div.quizCont[class*="part02-24"] .answerzone {height: 150px; margin-top: 20px;}
-	div.quizCont[class*="part02-24"] .answerzone > div {height: 150px;}
+	div.quizCont[class*="part02-8"] .answerlst.row li:nth-child(3) button {letter-spacing: -1.2px}
+	div.quizCont[class*="part02-8"] .answerzone {height: 150px; margin-top: 20px;}
+	div.quizCont[class*="part02-8"] .answerzone > div {height: 150px;}
 
 
 
@@ -350,9 +349,9 @@ div[class*='part03'].posterpage .br {display: block;}
 .part03-1 .name:before {display: block;  position: absolute; left:50%; top:0; content: ""; width: 36px; height: 3px; margin-left: -18px; background: #4d4d4d}
 .part03-1 .img {margin-top: 30px}
 .part03-2 {background: url(../images/part03/bg-before.jpg) no-repeat 50% 0; }
-.part03-16 {background: #f6f6f6; text-align: center;}
-.part03-16 .pagetit {padding-top: 69px}
-.part03-16 .txt {margin-top: 27px; color:#3d3d3d; font-size: 20px; text-align: center; line-height: 36px; font-weight: bold;}
+.part03-9 {background: #f6f6f6; text-align: center;}
+.part03-9 .pagetit {padding-top: 69px}
+.part03-9 .txt {margin-top: 27px; color:#3d3d3d; font-size: 20px; text-align: center; line-height: 36px; font-weight: bold;}
 
 div.quizCont[class*="part03-"] {background: url(../images/part03/bg-before.jpg) no-repeat 50% 50%; }
 	div.quizCont[class*="part03-"] .answerlst.row button {border-color:#9dcae8;}
