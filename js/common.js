@@ -61,10 +61,13 @@ var fncControlsComponent = (function(){
 		}
 		html = $('.cont', cont).filter("[data-cont="+current+"]").clone();
 		container.html(html);
+		$(".current", pager).text(current+1);
 		gnbBtn.removeClass("open");
 		$("#gnb").hide();
-		jplayer();
-		$(".current", pager).text(current+1);
+
+		var poster = $("#container .cont").data("poster"), 
+			 movie= $("#container .cont").data("movie");
+			jplayer(poster, movie);
 	})
 
 	// navZone CONTROLS
@@ -120,6 +123,10 @@ var fncControlsComponent = (function(){
 		$(".current", pager).text(current+1);
 		gnbBtn.removeClass("open");
 		$("#gnb").hide();
+
+		var poster = $("#container .cont").data("poster"), 
+			 movie= $("#container .cont").data("movie");
+			jplayer(poster, movie);
 	});
 
 })();
@@ -127,16 +134,18 @@ var fncControlsComponent = (function(){
 /* -----------------------------------------------------------------
 PLAYER
 ----------------------------------------------------------------- */
-function jplayer() {
+function jplayer(pasterUrl, moiveUrl) {
 	// 동영상 플레이어 
 	$("#jquery_jplayer_1").jPlayer({
 		ready: function () {
 			$(this).jPlayer("setMedia", {
-				title: "Big Buck Bunny",
-				m4v: "http://www.jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v",
-				ogv: "http://www.jplayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv",
-				webmv: "http://www.jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm",
-				poster: "http://www.jplayer.org/video/poster/Big_Buck_Bunny_Trailer_480x270.png"
+				title: "test",
+				// m4v: "http://www.jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v",
+				m4v: moiveUrl,
+				// ogv: "http://www.jplayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv",
+				// webmv: "http://www.jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm",
+				// poster: "http://www.jplayer.org/video/poster/Big_Buck_Bunny_Trailer_480x270.png"
+				poster : pasterUrl
 			});
 		},
 		swfPath: "../dist/jplayer",
