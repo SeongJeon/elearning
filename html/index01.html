@@ -142,7 +142,7 @@
 				<div class="form">
 					<strong class="answer">A</strong>
 					<div class="formbox">
-						<input type="text" placeholder="답변을 써주세요">
+						<input type="text" placeholder="답변을 써주세요" disabled="disabled">
 						<button type="button"><span>전문가 의견 확인</span></button>
 					</div>
 				</div>
@@ -331,8 +331,8 @@
 		}	
 	})
 	doc.on("click", ".quizlst button", function(){
-		console.log($(this).closest("li").index());
 		_idx = $(this).closest("li").index();
+		$(this).closest(".cont").find(".form input").removeAttr("disabled");
 		$(this).closest(".quizlst").hide();
 		$(this).closest(".quizlst").next(".quizAnswer").find(">div").eq(_idx).show();
 	})
