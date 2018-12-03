@@ -129,66 +129,177 @@ var fncControlsComponent = (function(){
 			jplayer(poster, movie);
 	});
 
+
+	jplayer(null,null);
+
 })();
 
 /* -----------------------------------------------------------------
 PLAYER
 ----------------------------------------------------------------- */
-function jplayer(pasterUrl, moiveUrl) {
-	// 동영상 플레이어 
-	$("#jquery_jplayer_1").jPlayer({
-		ready: function () {
-			$(this).jPlayer("setMedia", {
-				title: "test",
-				// m4v: "http://www.jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v",
-				m4v: moiveUrl,
-				// ogv: "http://www.jplayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv",
-				// webmv: "http://www.jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm",
-				// poster: "http://www.jplayer.org/video/poster/Big_Buck_Bunny_Trailer_480x270.png"
-				poster : pasterUrl
-			});
+// function jplayer(pasterUrl, moiveUrl) {
+// 	// 동영상 플레이어 
+// 	$("#jquery_jplayer_1").jPlayer({
+// 		ready: function () {
+// 			$(this).jPlayer("setMedia", {
+// 				title: "test",
+// 				// m4v: "http://www.jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v",
+// 				m4v: moiveUrl,
+// 				// ogv: "http://www.jplayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv",
+// 				// webmv: "http://www.jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm",
+// 				// poster: "http://www.jplayer.org/video/poster/Big_Buck_Bunny_Trailer_480x270.png"
+// 				poster : pasterUrl
+// 			});
+// 		},
+// 		swfPath: "../dist/jplayer",
+// 		supplied: "webmv, ogv, m4v",
+// 		size: {
+// 			width: "100%",
+// 			height: "610",
+// 			cssClass: "jp-video-360p"
+// 		},
+// 		useStateClassSkin: true,
+// 		autoBlur: false,
+// 		smoothPlayBar: true,
+// 		keyEnabled: true,
+// 		toggleDuration: true,
+// 		verticalVolume: true,
+// 		preload: "auto",
+// 		ended: function() { 
+// 	   	$(".jp-play").removeClass("pause");
+// 		}
+// 	});
+// 	$(".jp-mute").on("click", function(){
+// 		$(this).toggleClass("on");
+// 	})		
+// 	$(".jp-play").on("click", function(){
+// 		$(this).toggleClass("pause");
+// 	})		
+// 	$(".jp-stop").on("click", function(){
+// 		$(".jp-play").removeClass("pause");
+// 	})	
+// 	$(".jp-repeat").on("click", function(){
+// 		$(this).toggleClass("on");
+// 	})
+// 	$(".btn-volumbar").on("click", function(){
+// 		if($(this).hasClass("open")) $(".volume-bar-zone").hide();
+// 		else $(".volume-bar-zone").show();
+
+// 		$(this).toggleClass("open");
+// 	})
+// 	$(".jp-full-screen").on("click", function(){
+// 		$(this).toggleClass("notfull");
+// 	})
+// 	$(".jp-video-play").on("click", function(){
+// 		$(".jp-play").addClass("pause");
+// 	})
+// }
+function jplayer(pasterUrl, moiveUrl){
+	var myPlayer = $("#jquery_jplayer_1"),
+		myPlayerData,
+		fixFlash_mp4, // Flag: The m4a and m4v Flash player gives some old currentTime values when changed.
+		fixFlash_mp4_id, // Timeout ID used with fixFlash_mp4
+		ignore_timeupdate, // Flag used with fixFlash_mp4
+		options = {
+			ready: function (event) {
+				// Hide the volume slider on mobile browsers. ie., They have no effect.
+				if(event.jPlayer.status.noVolume) {
+					// Add a class and then CSS rules deal with it.
+					$(".jp-gui").addClass("jp-no-volume");
+				}
+				// Determine if Flash is being used and the mp4 media type is supplied. BTW, Supplying both mp3 and mp4 is pointless.
+				fixFlash_mp4 = event.jPlayer.flash.used && /m4a|m4v/.test(event.jPlayer.options.supplied);
+				// Setup the player with media.
+				$(this).jPlayer("setMedia", {
+					title: "Big Buck Bunny",
+					m4v: moiveUrl,
+					// ogv: "http://www.jplayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv",
+					// webmv: "http://www.jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm",
+					poster: pasterUrl
+				});
+			},
+			size: {
+				width: "100%",
+				height: "610px",
+				cssClass: "jp-video-360p"
+			},
+			timeupdate: function(event) {
+				if(!ignore_timeupdate) {
+					myControl.progress.slider("value", event.jPlayer.status.currentPercentAbsolute);
+				}
+			},
+			volumechange: function(event) {
+				if(event.jPlayer.options.muted) {
+					myControl.volume.slider("value", 0);
+				} else {
+					myControl.volume.slider("value", event.jPlayer.options.volume);
+				}
+			},
+			swfPath: "../dist/jplayer",
+			supplied: "webmv, ogv, m4v",
+			cssSelectorAncestor: "#jp_container_1",
+			wmode: "window",
+			smoothPlayBar: true,
+			keyEnabled: true
 		},
-		swfPath: "../dist/jplayer",
-		supplied: "webmv, ogv, m4v",
-		size: {
-			width: "100%",
-			height: "610",
-			cssClass: "jp-video-360p"
-		},
-		useStateClassSkin: true,
-		autoBlur: false,
-		smoothPlayBar: true,
-		keyEnabled: true,
-		toggleDuration: true,
-		verticalVolume: true,
-		preload: "auto",
-		ended: function() { 
-	   	$(".jp-play").removeClass("pause");
+		myControl = {
+			progress: $(options.cssSelectorAncestor + " .jp-progress-slider"),
+			volume: $(options.cssSelectorAncestor + " .jp-volume-slider")
+		};
+
+	// Instance jPlayer
+	myPlayer.jPlayer(options);
+
+	// A pointer to the jPlayer data object
+	myPlayerData = myPlayer.data("jPlayer");
+
+	// Define hover states of the buttons
+	$('.jp-gui ul li').hover(function() { $(this).addClass('ui-state-hover'); }, function() { $(this).removeClass('ui-state-hover'); } );
+
+	// Create the progress slider control
+	myControl.progress.slider({
+		animate: "fast",
+		max: 100,
+		range: "min",
+		step: 0.1,
+		value : 0,
+		slide: function(event, ui) {
+			var sp = myPlayerData.status.seekPercent;
+			if(sp > 0) {
+				// Apply a fix to mp4 formats when the Flash is used.
+				if(fixFlash_mp4) {
+					ignore_timeupdate = true;
+					clearTimeout(fixFlash_mp4_id);
+					fixFlash_mp4_id = setTimeout(function() {
+						ignore_timeupdate = false;
+					},1000);
+				}
+				// Move the play-head to the value and factor in the seek percent.
+				myPlayer.jPlayer("playHead", ui.value * (100 / sp));
+			} else {
+				// Create a timeout to reset this slider to zero.
+				setTimeout(function() {
+					myControl.progress.slider("value", 0);
+				}, 0);
+			}
 		}
 	});
 
-	$(".jp-mute").on("click", function(){
-		$(this).toggleClass("on");
-	})		
-	$(".jp-play").on("click", function(){
-		$(this).toggleClass("pause");
-	})		
-	$(".jp-stop").on("click", function(){
-		$(".jp-play").removeClass("pause");
-	})	
-	$(".jp-repeat").on("click", function(){
-		$(this).toggleClass("on");
-	})
-	$(".btn-volumbar").on("click", function(){
-		if($(this).hasClass("open")) $(".volume-bar-zone").hide();
-		else $(".volume-bar-zone").show();
+	// Create the volume slider control
+	myControl.volume.slider({
+		animate: "fast",
+		max: 1,
+		range: "min",
+		step: 0.01,
+		value : $.jPlayer.prototype.options.volume,
+		slide: function(event, ui) {
+			myPlayer.jPlayer("option", "muted", false);
+			myPlayer.jPlayer("option", "volume", ui.value);
+		}
+	});
 
-		$(this).toggleClass("open");
-	})
-	$(".jp-full-screen").on("click", function(){
-		$(this).toggleClass("notfull");
-	})
-	$(".jp-video-play").on("click", function(){
-		$(".jp-play").addClass("pause");
-	})
+	if($("#container .cont.video").length < 1){
+		$("div.jp-video-play").hide();
+	}
+
 }
