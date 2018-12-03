@@ -132,7 +132,7 @@
 	div[id*="DownPop"] .btn-group li + li {margin-left: 36px;}
 	div[id*="DownPop"] .btn-group a {display: inline-block;padding-top: 34px; vertical-align: top; width: 156px; height: 156px; border-radius: 1000px; text-align: center; color:#fff; font-size: 23px; font-weight: bold; background: #fd7a04; border:1px solid #ea7105; box-sizing: border-box;}
 	div[id*="DownPop"] .btn-group a:after {display:block; content: ""; width: 59px; height: 50px; margin:17px auto; background: url(../images/common/sp-img.png) no-repeat -100px -300px;}
-	div[id*="DownPop"] .btn-group li:last-child a {background: #4a97c7; border-color:#3884b4;}
+	div[id*="DownPop"] .btn-group li:nth-child(2) a {background: #4a97c7; border-color:#3884b4;}
 
 
 

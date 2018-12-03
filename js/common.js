@@ -26,26 +26,6 @@ var fncControlsComponent = (function(){
 		}
 	})
 
-	/*
-	$.ajax({
-		type: "get",
-		url: '../data.json',
-		dataType: 'JSON',
-		success: function(data){
-			// DEFAULT
-			$.each(data, function(idx, val) {
-				if(this.part != partNum) return;
-				for(var i = 0 ; i < this.listName.length ; i++){
-					// partLst.append('<li><a href="#none" data-idx="'+ i +'">'+ this.listName[i] +'</a></li>');
-				}
-				pager.find('.max').text(this.total);
-				$("#container").load("/elearning-publishing/html/"+ partName + "/" + this.fileName[0]);
-				maxNum = this.total;
-				jsonAry = this;
-			});
-		}
-	});
-	*/
 
 	// PAGER CONTROLS
 	$("#controlsPage button").on("click", function(){
@@ -102,19 +82,6 @@ var fncControlsComponent = (function(){
 			}
 		}
 	})
-	// OPTION MENU CLICK
-	$(".optionlist a").on("click", function(){
-		var pop = $(this).attr("href");
-		$("#wrap").append("<span class='dim'></span>");
-		$(pop).show();
-		optLstBtn.removeClass("open");
-		$(".optionlist").hide();
-		return false;
-	})
-	$(".popup .closebtn").on("click", function(){
-		$("#wrap .dim").remove();
-		$(this).closest(".popup").hide();
-	})
 	// GNB - INDEX MENU CLICK
 	$(document).on("click","#gnb a", function(e){
 		current = parseInt($(this).attr("data-idx"));
@@ -128,9 +95,32 @@ var fncControlsComponent = (function(){
 			 movie= $("#container .cont").data("movie");
 			jplayer(poster, movie);
 	});
-
+	// OPTION MENU CLICK
+	$(".optionlist a").on("click", function(){
+		var pop = $(this).attr("href");
+		$("#wrap").append("<span class='dim'></span>");
+		$(pop).show();
+		optLstBtn.removeClass("open");
+		$(".optionlist").hide();
+		return false;
+	})
+	$(".popup .closebtn").on("click", function(){
+		$("#wrap .dim").remove();
+		$(this).closest(".popup").hide();
+	})
+	
 
 	jplayer(null,null);
+
+	// main - start btn
+	$(document).on("click", ".btn-start", function(){
+		current = 1;
+		html = $('.cont', cont).filter("[data-cont="+current+"]").clone();
+		container.html(html);
+		$(".current", pager).text(current+1);
+		gnbBtn.removeClass("open");
+		$("#gnb").hide();
+	})
 
 })();
 
