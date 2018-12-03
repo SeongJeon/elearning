@@ -173,7 +173,7 @@ function jplayer(pasterUrl, moiveUrl){
 					// ogv: "http://www.jplayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv",
 					// webmv: "http://www.jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm",
 					poster: pasterUrl
-				});
+				}).jPlayer("play");
 			},
 			size: {
 				width: "100%",
