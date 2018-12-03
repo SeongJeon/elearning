@@ -48,6 +48,7 @@ var fncControlsComponent = (function(){
 		var poster = $("#container .cont").data("poster"), 
 			 movie= $("#container .cont").data("movie");
 			jplayer(poster, movie);
+			console.log(poster);
 	})
 
 	// navZone CONTROLS
@@ -109,9 +110,6 @@ var fncControlsComponent = (function(){
 		$(this).closest(".popup").hide();
 	})
 	
-
-	jplayer(null,null);
-
 	// main - start btn
 	$(document).on("click", ".btn-start", function(){
 		current = 1;
@@ -122,68 +120,12 @@ var fncControlsComponent = (function(){
 		$("#gnb").hide();
 	})
 
+	jplayer(null,null);
 })();
 
 /* -----------------------------------------------------------------
 PLAYER
 ----------------------------------------------------------------- */
-// function jplayer(pasterUrl, moiveUrl) {
-// 	// 동영상 플레이어 
-// 	$("#jquery_jplayer_1").jPlayer({
-// 		ready: function () {
-// 			$(this).jPlayer("setMedia", {
-// 				title: "test",
-// 				// m4v: "http://www.jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v",
-// 				m4v: moiveUrl,
-// 				// ogv: "http://www.jplayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv",
-// 				// webmv: "http://www.jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm",
-// 				// poster: "http://www.jplayer.org/video/poster/Big_Buck_Bunny_Trailer_480x270.png"
-// 				poster : pasterUrl
-// 			});
-// 		},
-// 		swfPath: "../dist/jplayer",
-// 		supplied: "webmv, ogv, m4v",
-// 		size: {
-// 			width: "100%",
-// 			height: "610",
-// 			cssClass: "jp-video-360p"
-// 		},
-// 		useStateClassSkin: true,
-// 		autoBlur: false,
-// 		smoothPlayBar: true,
-// 		keyEnabled: true,
-// 		toggleDuration: true,
-// 		verticalVolume: true,
-// 		preload: "auto",
-// 		ended: function() { 
-// 	   	$(".jp-play").removeClass("pause");
-// 		}
-// 	});
-// 	$(".jp-mute").on("click", function(){
-// 		$(this).toggleClass("on");
-// 	})		
-// 	$(".jp-play").on("click", function(){
-// 		$(this).toggleClass("pause");
-// 	})		
-// 	$(".jp-stop").on("click", function(){
-// 		$(".jp-play").removeClass("pause");
-// 	})	
-// 	$(".jp-repeat").on("click", function(){
-// 		$(this).toggleClass("on");
-// 	})
-// 	$(".btn-volumbar").on("click", function(){
-// 		if($(this).hasClass("open")) $(".volume-bar-zone").hide();
-// 		else $(".volume-bar-zone").show();
-
-// 		$(this).toggleClass("open");
-// 	})
-// 	$(".jp-full-screen").on("click", function(){
-// 		$(this).toggleClass("notfull");
-// 	})
-// 	$(".jp-video-play").on("click", function(){
-// 		$(".jp-play").addClass("pause");
-// 	})
-// }
 function jplayer(pasterUrl, moiveUrl){
 	var myPlayer = $("#jquery_jplayer_1"),
 		myPlayerData,

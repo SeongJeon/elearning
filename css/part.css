@@ -209,7 +209,7 @@ div[class*='part02-2'] .location:after {background: url(../images/part02/img_ico
 /* PART02 보충학습 */
 .part02-9 {background: #f6f6f6; text-align: center;}
 .part02-9 .pagetit {padding-top: 69px}
-.part02-9 .txt {margin-top: 4px; color:#3d3d3d; font-size: 20px; text-align: center;}
+.part02-9 .txt {margin-top:95px; color:#3d3d3d; font-size: 30px; text-align: center;}
 /* PART02 퀴즈 */
 div.quizCont[class*="part02-"] {background: url(../images/part02/bg-quiz.jpg) no-repeat 50% 50%; }
 div.quizCont[class*="part02-"] .answerlst.row button {border-color:#9dcae8;}
@@ -245,7 +245,7 @@ div[class*='part03'].posterpage .br {display: block;}
 /* PART03 보충학습 */
 .part03-9 {background: #f6f6f6; text-align: center;}
 .part03-9 .pagetit {padding-top: 69px}
-.part03-9 .txt {margin-top: 27px; color:#3d3d3d; font-size: 20px; text-align: center; line-height: 36px; font-weight: bold;}
+.part03-9 .txt {margin-top:95px; color:#3d3d3d; font-size: 30px; text-align: center;}
 /* PARTT03 퀴즈 */
 div.quizCont[class*="part03-"] {background: url(../images/part03/bg-before.jpg) no-repeat 50% 50%; }
 div.quizCont[class*="part03-"] .answerlst.row button {border-color:#9dcae8;}
