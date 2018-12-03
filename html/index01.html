@@ -34,9 +34,9 @@
 							<h2 class="tit icon4">정리하기</h2>
 							<ul>
 								<li><a href="#none" data-idx="5"><span>퀴즈</span></a></li>
-								<li><a href="#none" data-idx="8"><span>학습정리</span></a></li>
-								<li><a href="#none" data-idx="9"><span>보충심화학습</span></a></li>
-								<li><a href="#none" data-idx="10"><span>다음차시안내</span></a></li>
+								<li><a href="#none" data-idx="6"><span>학습정리</span></a></li>
+								<li><a href="#none" data-idx="7"><span>보충심화학습</span></a></li>
+								<li><a href="#none" data-idx="8"><span>다음차시안내</span></a></li>
 							</ul>
 						</div>
 					</nav>
@@ -80,20 +80,23 @@
 								<li class="jp-repeat-off ui-state-default ui-state-active ui-corner-all">
 									<a href="javascript:;" class="jp-repeat-off ui-icon ui-icon-refresh" tabindex="1" title="repeat off">repeat off</a>
 								</li>
-								<li class="jp-mute ui-state-default ui-corner-all">
+								<!-- <li class="jp-mute ui-state-default ui-corner-all">
 									<a href="javascript:;" class="jp-mute ui-icon ui-icon-volume-off" tabindex="1" title="mute">mute</a>
 								</li>
 								<li class="jp-unmute ui-state-default ui-state-active ui-corner-all">
 									<a href="javascript:;" class="jp-unmute ui-icon ui-icon-volume-off" tabindex="1" title="unmute">unmute</a>
-								</li>
+								</li> -->
 								<!-- <li class="jp-volume-max ui-state-default ui-corner-all">
 									<a href="javascript:;" class="jp-volume-max ui-icon ui-icon-volume-on" tabindex="1" title="max volume">max volume</a>
 								</li> -->
 							</ul>
 							<div class="jp-toggles">
+								<button type="button" class="btn-volum">sound</button>
+								<div class="volume-bar-zone ">
+									<div class="jp-volume-slider"></div>
+								</div>
 								<button class="jp-full-screen" role="button" tabindex="0">full screen</button>
 							</div>
-							<div class="jp-volume-slider"></div>
 						</div>
 					</div>
 				</div>
@@ -135,7 +138,7 @@
 						<div class="a3"><img src="../images/part01/p1_p2_3a.png" alt=""></div>
 					</div>
 					<!-- 교수답변 -->
-					<div class="part01-1-2">
+					<div class="part01-2-2">
 						<p class="img"><img src="../images/part01/p1_p6.png" alt=""></p>	
 					</div>
 				</div>
@@ -161,62 +164,62 @@
 				<div id="jquery_jplayer_1" class="jp-jplayer"> </div>
 			</div>
 			<!-- page6 퀴즈1 -->
-			<div class="part01-8 quizCont cont">
+			<div class="part01 quizCont cont">
 				<p class="location lo5">정리하기>퀴즈</p>
-				<p class="quiz"><em class="num">Q1</em>대뇌피질 중 종합적 사고기능을 담당하고 있으며 인간의 뇌의 40%를 <br>차지하고 있는 것은?</p>
-				<ul class="answerlst">
-					<li><button type='button' class="answer">① 전두엽</button></li>
-					<li><button type='button'>② 후두엽</button></li>
-					<li><button type='button'>③ 두정엽</button></li>
-					<li><button type='button'>④ 측두엽</button></li>
-				</ul>
-				<div class="answerzone">
-					<div>
-						<p class="answerTix"><span>정답 :</span> ① 전두엽</p>
-						<p class="txt">종합적 사고, 예측, 판단, 추리의 역할을 담당한다. 영아기의 과도한 TV시청등은 전두엽을 손상시킨다.</p>
+				<div class="part01-8">
+					<p class="quiz"><em class="num">Q1</em>대뇌피질 중 종합적 사고기능을 담당하고 있으며 인간의 뇌의 40%를 <br>차지하고 있는 것은?</p>
+					<ul class="answerlst">
+						<li><button type='button' class="answer">① 전두엽</button></li>
+						<li><button type='button'>② 후두엽</button></li>
+						<li><button type='button'>③ 두정엽</button></li>
+						<li><button type='button'>④ 측두엽</button></li>
+					</ul>
+					<p class="btn-next-zone"><button type="button" class="btn-next">다음문제</button></p>
+					<div class="answerzone">
+						<div>
+							<p class="answerTix"><span>정답 :</span> ① 전두엽</p>
+							<p class="txt">종합적 사고, 예측, 판단, 추리의 역할을 담당한다. 영아기의 과도한 TV시청등은 전두엽을 손상시킨다.</p>
+						</div>
+					</div>
+				</div>
+				<div class="part01-9">
+					<p class="quiz"><em class="num">Q2</em>호흡, 수면, 의식과 관련이 있으며 반사운동과 신체기능을 통제하는 <br>역할을 하고, 출생 시 이미 완전한 기능을 하는 곳은?</p>
+					<ul class="answerlst">
+						<li><button type='button'>① 소뇌</button></li>
+						<li><button type='button' class="answer">② 뇌간</button></li>
+						<li><button type='button'>③ 해마</button></li>
+						<li><button type='button'>④ 편도체</button></li>
+					</ul>
+					<p class="btn-next-zone"><button type="button" class="btn-next">다음문제</button></p>
+					<div class="answerzone">
+						<div>
+							<p class="answerTix"><span>정답 :</span> ② 뇌간</p>
+							<p class="txt">뇌간은 호흡과 관련있으므로 출생 시부터 완전히 기능하고 있으며, 제대로 기능하지 못한다면 살 수 없다.</p>
+						</div>
+					</div>
+				</div>
+				<div class="part01-10">
+					<p class="quiz"><em class="num">Q3</em>생후 6개월의 영아는 성인보다 더 많은 시냅스를 가지고 있다가 어떤 <br>경험을 하느냐에 따라 필요 없는 시냅스는 소멸되는데 이는 어떤 현상인가? </p>
+					<ul class="answerlst">
+						<li><button type='button'>① 추가하기</button></li>
+						<li><button type='button'>② 소멸하기</button></li>
+						<li><button type='button' class="answer">③ 가지치기</button></li>
+						<li><button type='button'>④ 통합하기</button></li>
+					</ul>
+					<div class="answerzone">
+						<div>
+							<p class="answerTix"><span>정답 :</span> ③ 가지치기</p>
+							<p class="txt">가지치기를 통해 필요한 신경세포를 남긴다.</p>
+						</div>
 					</div>
 				</div>
 			</div>
-			<!-- page7 퀴즈2 -->
-			<div class="part01-9 quizCont cont">
-				<p class="location lo5">정리하기>퀴즈</p>
-				<p class="quiz"><em class="num">Q2</em>호흡, 수면, 의식과 관련이 있으며 반사운동과 신체기능을 통제하는 <br>역할을 하고, 출생 시 이미 완전한 기능을 하는 곳은?</p>
-				<ul class="answerlst">
-					<li><button type='button'>① 소뇌</button></li>
-					<li><button type='button' class="answer">② 뇌간</button></li>
-					<li><button type='button'>③ 해마</button></li>
-					<li><button type='button'>④ 편도체</button></li>
-				</ul>
-				<div class="answerzone">
-					<div>
-						<p class="answerTix"><span>정답 :</span> ② 뇌간</p>
-						<p class="txt">뇌간은 호흡과 관련있으므로 출생 시부터 완전히 기능하고 있으며, 제대로 기능하지 못한다면 살 수 없다.</p>
-					</div>
-				</div>
-			</div>
-			<!-- page8 퀴즈3 -->
-			<div class="part01-10 quizCont cont">
-				<p class="location lo5">정리하기>퀴즈</p>
-				<p class="quiz"><em class="num">Q3</em>생후 6개월의 영아는 성인보다 더 많은 시냅스를 가지고 있다가 어떤 <br>경험을 하느냐에 따라 필요 없는 시냅스는 소멸되는데 이는 어떤 현상인가? </p>
-				<ul class="answerlst">
-					<li><button type='button'>① 추가하기</button></li>
-					<li><button type='button'>② 소멸하기</button></li>
-					<li><button type='button' class="answer">③ 가지치기</button></li>
-					<li><button type='button'>④ 통합하기</button></li>
-				</ul>
-				<div class="answerzone">
-					<div>
-						<p class="answerTix"><span>정답 :</span> ③ 가지치기</p>
-						<p class="txt">가지치기를 통해 필요한 신경세포를 남긴다.</p>
-					</div>
-				</div>
-			</div>
-			<!-- page9 정리하기 -->
+			<!-- page7 정리하기 -->
 			<div class="part01-12 cont">
 				<p class="location lo7">정리하기>학습정리</p>
 				<img src="../images/part01/p1_p16.png" alt="">
 			</div>
-			<!-- page10 보충심화학습(아이프레임) -->
+			<!-- page8 보충심화학습(아이프레임) -->
 			<div class="part01-11 cont">
 				<p class="location lo6">정리하기>보충학습</p>
 				<p class="txt">학습 후 보충 심화 학습자료를 확인해보세요.</p>
@@ -240,7 +243,7 @@
 					<p>출처: 미국 소아과학회</p>
 				</div>
 			</div>
-			<!-- page11 마지막 페이지 -->
+			<!-- page9 마지막 페이지 -->
 			<div class="part01-13 lastpage cont">
 				<p class="currentpart">영아기 뇌발달과 미디어</p>
 				<p class="nextpart"><span class="br">영아의</span><span class="point1">자유놀이와</span> <span class="point2">교사의 역할</span></p>
@@ -303,15 +306,33 @@
 <script src="../js/jquery-ui.js"></script>
 <script src="../js/common.js"></script>
 <script>
-	var doc = $(document);
-
+	var doc = $(document), num = 0, temp = false;
 	// 정리 퀴즈
 	doc.on("click", ".quizCont .answerlst button", function(){
-		var answer = $(this).closest(".quizCont").find(".answerzone");
+		var answer = $(this).closest("div[class*='part01-']").find(".answerzone");
 
+		$(this).hasClass("answer") ? temp = true :  temp = false;
+
+		if(num > 1) return false;
+
+		if(temp){
+			answer.fadeIn(200);
+			$(this).closest("div[class*='part01-']").find(".btn-next-zone").show();
+			num = 2;
+		}else{
+			if(num >= 1) {
+				answer.fadeIn(200);
+				$(this).closest("div[class*='part01-']").find(".btn-next-zone").show();
+			}
+			$(this).addClass("shake");
+			num++;
+		}
 		$(this).addClass("selected").closest("li").siblings().find("button").removeClass("selected shake");
-		if($(this).hasClass("answer") == false) $(this).addClass("shake");
-		answer.fadeIn(200);
+	})
+	doc.on("click",".btn-next-zone .btn-next", function(){
+		$(this).closest("div[class*='part01-']").hide();
+		$(this).closest("div[class*='part01-']").next("div[class*='part01-']").show();
+		num=0;
 	})
 
 	// 사전학습 퀴즈	
@@ -323,7 +344,7 @@
 		}else{
 			$(this).closest(".part01-2").find(".form").hide();
 			change.find(">div").hide();
-			change.find(".part01-1-2").show();
+			change.find(".part01-2-2").show();
 		}	
 	})
 	doc.on("click", ".quizlst button", function(){

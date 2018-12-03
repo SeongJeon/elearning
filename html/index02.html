@@ -34,9 +34,9 @@
 							<h2 class="tit icon4">정리하기</h2>
 							<ul>
 								<li><a href="#none" data-idx="5"><span>퀴즈</span></a></li>
-								<li><a href="#none" data-idx="8"><span>학습정리</span></a></li>
-								<li><a href="#none" data-idx="9"><span>보충심화학습</span></a></li>
-								<li><a href="#none" data-idx="10"><span>다음차시안내</span></a></li>
+								<li><a href="#none" data-idx="6"><span>학습정리</span></a></li>
+								<li><a href="#none" data-idx="7"><span>보충심화학습</span></a></li>
+								<li><a href="#none" data-idx="8"><span>다음차시안내</span></a></li>
 							</ul>
 						</div>
 					</nav>
@@ -80,20 +80,23 @@
 								<li class="jp-repeat-off ui-state-default ui-state-active ui-corner-all">
 									<a href="javascript:;" class="jp-repeat-off ui-icon ui-icon-refresh" tabindex="1" title="repeat off">repeat off</a>
 								</li>
-								<li class="jp-mute ui-state-default ui-corner-all">
+								<!-- <li class="jp-mute ui-state-default ui-corner-all">
 									<a href="javascript:;" class="jp-mute ui-icon ui-icon-volume-off" tabindex="1" title="mute">mute</a>
 								</li>
 								<li class="jp-unmute ui-state-default ui-state-active ui-corner-all">
 									<a href="javascript:;" class="jp-unmute ui-icon ui-icon-volume-off" tabindex="1" title="unmute">unmute</a>
-								</li>
+								</li> -->
 								<!-- <li class="jp-volume-max ui-state-default ui-corner-all">
 									<a href="javascript:;" class="jp-volume-max ui-icon ui-icon-volume-on" tabindex="1" title="max volume">max volume</a>
 								</li> -->
 							</ul>
 							<div class="jp-toggles">
+								<button type="button" class="btn-volum">sound</button>
+								<div class="volume-bar-zone ">
+									<div class="jp-volume-slider"></div>
+								</div>
 								<button class="jp-full-screen" role="button" tabindex="0">full screen</button>
 							</div>
-							<div class="jp-volume-slider"></div>
 						</div>
 					</div>
 				</div>
@@ -141,76 +144,76 @@
 					</div>
 				</div>
 			</div>
-			<!-- page4 학습목표 -->
+			<!-- page3 학습목표 -->
 			<div class="part02-3 cont">
 				<p class="location lo2">들어가기>학습목표</p>
 				<img src="../images/part02/p2_p4.png" alt="">
 			</div>
-			<!-- page5 - 1부 이론  -->
+			<!-- page4 - 1부 이론  -->
 			<div class="part02-4 video cont" data-poster="../images/part02/poster1.png" data-movie="../movie/part2-1.mp4">
 				<div id="jquery_jplayer_1" class="jp-jplayer"> </div>
 			</div>
-			<!-- page6 - 2부 적용 -->
+			<!-- page5 - 2부 적용 -->
 			<div class="part02-5 video cont"  data-poster="../images/part02/poster2.png" data-movie="../movie/part2-2.mp4">
 				<div id="jquery_jplayer_1" class="jp-jplayer"> </div>
 			</div>
-			<!-- page7 퀴즈1 -->
+			<!-- page6 퀴즈 -->
 			<div class="part02-6 quizCont cont">
 				<p class="location lo5">정리하기>퀴즈</p>
-				<p class="quiz"><em class="num">Q1</em>다음 중 화에 대한 설명으로 바르지 않은 것은?</p>
-				<ul class="answerlst row">
-					<li><button type='button' class="answer"><span>①</span> 화는 전이가 빠르고 노출되기 쉬우므로 되도록 참으면 참을수록 좋은 것이다.</button></li>
-					<li><button type='button'><span>②</span> 화는 자꾸 표출할수록 중독될 수 있다. </button></li>
-					<li><button type='button'><span>③</span> 화가 유발되기 위해서는 스트레스뿐만 아니라 촉발사고가 필요하다.</button></li>
-					<li><button type='button'><span>④</span> 현재의 분노와 갈등은 어린 시절에 해결되지 않는 상처와 연관된 것이다.</button></li>
-				</ul>
-				<div class="answerzone">
-					<div>
-						<p class="answerTix"><span>정답 :</span> ①</p>
-						<p class="txt">화의 분출로 인한 해소는 일시적일이다. 분노에 관계되는 변연계가 자주 활성화되면 이를 조절하는 <br>전전두엽의 기능이 노화되어 제 역할을 못하게 되고 결국 작은 자극에도 폭발하게 된다.</p>
+				<div class="part02-6">
+					<p class="quiz"><em class="num">Q1</em>다음 중 화에 대한 설명으로 바르지 않은 것은?</p>
+					<ul class="answerlst row">
+						<li><button type='button' class="answer"><span>①</span> 화는 전이가 빠르고 노출되기 쉬우므로 되도록 참으면 참을수록 좋은 것이다.</button></li>
+						<li><button type='button'><span>②</span> 화는 자꾸 표출할수록 중독될 수 있다. </button></li>
+						<li><button type='button'><span>③</span> 화가 유발되기 위해서는 스트레스뿐만 아니라 촉발사고가 필요하다.</button></li>
+						<li><button type='button'><span>④</span> 현재의 분노와 갈등은 어린 시절에 해결되지 않는 상처와 연관된 것이다.</button></li>
+					</ul>
+					<p class="btn-next-zone"><button type="button" class="btn-next">다음문제</button></p>
+					<div class="answerzone">
+						<div>
+							<p class="answerTix"><span>정답 :</span> ①</p>
+							<p class="txt">화의 분출로 인한 해소는 일시적일이다. 분노에 관계되는 변연계가 자주 활성화되면 이를 조절하는 <br>전전두엽의 기능이 노화되어 제 역할을 못하게 되고 결국 작은 자극에도 폭발하게 된다.</p>
+						</div>
+					</div>
+				</div>
+				<div class="part02-7">
+					<p class="quiz"><em class="num">Q2</em>체벌과 학대에 대한 설명으로 바르지 않은 것은?</p>
+					<ul class="answerlst row">
+						<li><button type='button'><span>①</span> 사실상 체벌과 학대는 사회적으로, 법적으로 명확한 기준이 제시되지 못하여 구분하기가 어렵다. </button></li>
+						<li><button type='button'><span>②</span> 체벌의 목적은 교육이고, 학대는 감정이 실려 행해지는 경향이 크다. </button></li>
+						<li><button type='button' class="answer"><span>③</span> 효과적인 교육을 위해서 적절한 체벌은 허용하는 것이 학대 예방을 위해서도 필요하다.</button></li>
+						<li><button type='button'><span>④</span> 체벌은 기대만큼 교육적인 효과가 크지 못하고 관계만 어지럽힐 수 있다.</button></li>
+					</ul>
+					<p class="btn-next-zone"><button type="button" class="btn-next">다음문제</button></p>
+					<div class="answerzone">
+						<div>
+							<p class="answerTix"><span>정답 :</span> ③</p>
+							<p class="txt">대부분의 학대가 체벌에서 시작될 수 있기 때문에 <br>훈육이라는 미명하에 행해지는 체벌도 금지되어야 할 것이다. </p>
+						</div>
+					</div>
+				</div>
+				<div class="part02-8">
+					<p class="quiz"><em class="num">Q3</em>화를 잘 표현하는 방법으로 옳지 않은 것은?</p>
+					<ul class="answerlst row">
+						<li><button type='button'><span>①</span> 화가 난 아동의 감정을 이해해주는 것이 필요하나 허용해 주어야 할 화와 허용해 주지 말아야 할 화를 구별해서 지도해야 한다.</button></li>
+						<li><button type='button' class="answer"><span>②</span> 부끄러움은 마음이 약해서이기 때문이므로 다소 강압적으로 훈련시키고 빨리 고치지 못하면 살아가면서 많은 손해를 보게 될 것이라고 겁을 줄 필요도 있다.</button></li>
+						<li><button type='button'><span>③</span> 과잉행동을 하는 아동의 경우 자신의 행동을 스스로 관찰하고 인식하는 능력을 키워주는 것이 필요하다.</button></li>
+						<li><button type='button'><span>④</span> 충동조절의 어려움으로 물건을 훔치는 경우 충동이 생길 때 어떻게 하면 그 충동을 멈추고 다시 생각해서 문제를 해결할지 알려주는 것이 중요하다.</button></li>
+					</ul>
+					<div class="answerzone">
+						<div>
+							<p class="answerTix"><span>정답 :</span> ②</p>
+							<p class="txt">부끄러움을 많이 타고 내성적인 아이를 위한 지도방안으로는<br> 용기를 잃지 않도록 격려해 주는 것이 적합하다.</p>
+						</div>
 					</div>
 				</div>
 			</div>
-			<!-- page8 퀴즈2 -->
-			<div class="part02-7 quizCont cont">
-				<p class="location lo5">정리하기>퀴즈</p>
-				<p class="quiz"><em class="num">Q2</em>체벌과 학대에 대한 설명으로 바르지 않은 것은?</p>
-				<ul class="answerlst row">
-					<li><button type='button'><span>①</span> 사실상 체벌과 학대는 사회적으로, 법적으로 명확한 기준이 제시되지 못하여 구분하기가 어렵다. </button></li>
-					<li><button type='button'><span>②</span> 체벌의 목적은 교육이고, 학대는 감정이 실려 행해지는 경향이 크다. </button></li>
-					<li><button type='button' class="answer"><span>③</span> 효과적인 교육을 위해서 적절한 체벌은 허용하는 것이 학대 예방을 위해서도 필요하다.</button></li>
-					<li><button type='button'><span>④</span> 체벌은 기대만큼 교육적인 효과가 크지 못하고 관계만 어지럽힐 수 있다.</button></li>
-				</ul>
-				<div class="answerzone">
-					<div>
-						<p class="answerTix"><span>정답 :</span> ③</p>
-						<p class="txt">대부분의 학대가 체벌에서 시작될 수 있기 때문에 <br>훈육이라는 미명하에 행해지는 체벌도 금지되어야 할 것이다. </p>
-					</div>
-				</div>
-			</div>
-			<!-- page9 퀴즈3 -->
-			<div class="part02-8 quizCont cont">
-				<p class="location lo5">정리하기>퀴즈</p>
-				<p class="quiz"><em class="num">Q3</em>화를 잘 표현하는 방법으로 옳지 않은 것은?</p>
-				<ul class="answerlst row">
-					<li><button type='button'><span>①</span> 화가 난 아동의 감정을 이해해주는 것이 필요하나 허용해 주어야 할 화와 허용해 주지 말아야 할 화를 구별해서 지도해야 한다.</button></li>
-					<li><button type='button' class="answer"><span>②</span> 부끄러움은 마음이 약해서이기 때문이므로 다소 강압적으로 훈련시키고 빨리 고치지 못하면 살아가면서 많은 손해를 보게 될 것이라고 겁을 줄 필요도 있다.</button></li>
-					<li><button type='button'><span>③</span> 과잉행동을 하는 아동의 경우 자신의 행동을 스스로 관찰하고 인식하는 능력을 키워주는 것이 필요하다.</button></li>
-					<li><button type='button'><span>④</span> 충동조절의 어려움으로 물건을 훔치는 경우 충동이 생길 때 어떻게 하면 그 충동을 멈추고 다시 생각해서 문제를 해결할지 알려주는 것이 중요하다.</button></li>
-				</ul>
-				<div class="answerzone">
-					<div>
-						<p class="answerTix"><span>정답 :</span> ②</p>
-						<p class="txt">부끄러움을 많이 타고 내성적인 아이를 위한 지도방안으로는<br> 용기를 잃지 않도록 격려해 주는 것이 적합하다.</p>
-					</div>
-				</div>
-			</div>
-			<!-- page11 정리하기 -->
+			<!-- page7 정리하기 -->
 			<div class="part02-10 cont">
 				<p class="location lo7">정리하기>학습정리</p>
 				<img src="../images/part02/p2_p28.png" alt="">
 			</div>
-			<!-- page10 보충심화학습(아이프레임) -->
+			<!-- page8 보충심화학습(아이프레임) -->
 			<div class="part02-9 cont">
 				<p class="location lo6">정리하기>보충학습</p>
 				<p class="txt">학습 후 보충 심화 학습자료를 확인해보세요.</p>
@@ -239,7 +242,7 @@
 					</p>
 				</div>
 			</div>
-			<!-- page12 마지막 페이지 -->
+			<!-- page9 마지막 페이지 -->
 			<div class="part02-27 lastpage cont">
 				<p class="currentpart">문제행동별 지도방안</p>
 				<p class="nextpart"><span class="br">부모와의</span>상담</p>
@@ -304,14 +307,33 @@
 <script src="../js/jquery-ui.js"></script>
 <script src="../js/common.js"></script>
 <script>
-	var doc = $(document);
+	var doc = $(document), num = 0, temp = false;
 	// 정리 퀴즈
 	doc.on("click", ".quizCont .answerlst button", function(){
-		var answer = $(this).closest(".quizCont").find(".answerzone");
+		var answer = $(this).closest("div[class*='part02-']").find(".answerzone");
 
+		$(this).hasClass("answer") ? temp = true :  temp = false;
+
+		if(num > 1) return false;
+
+		if(temp){
+			answer.fadeIn(200);
+			$(this).closest("div[class*='part02-']").find(".btn-next-zone").show();
+			num = 2;
+		}else{
+			if(num >= 1) {
+				answer.fadeIn(200);
+				$(this).closest("div[class*='part02-']").find(".btn-next-zone").show();
+			}
+			$(this).addClass("shake");
+			num++;
+		}
 		$(this).addClass("selected").closest("li").siblings().find("button").removeClass("selected shake");
-		if($(this).hasClass("answer") == false) $(this).addClass("shake");
-		answer.fadeIn(200);
+	})
+	doc.on("click",".btn-next-zone .btn-next", function(){
+		$(this).closest("div[class*='part02-']").hide();
+		$(this).closest("div[class*='part02-']").next("div[class*='part02-']").show();
+		num=0;
 	})
 	
 	// 사전학습 퀴즈	

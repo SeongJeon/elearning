@@ -44,11 +44,13 @@ var fncControlsComponent = (function(){
 		$(".current", pager).text(current+1);
 		gnbBtn.removeClass("open");
 		$("#gnb").hide();
+		$(".jp-toggles .btn-volum").removeClass("open");
+		$(".jp-toggles .volume-bar-zone").hide();
 
 		var poster = $("#container .cont").data("poster"), 
 			 movie= $("#container .cont").data("movie");
-			jplayer(poster, movie);
-			console.log(poster);
+
+		jplayer(poster, movie);
 	})
 
 	// navZone CONTROLS
@@ -64,6 +66,8 @@ var fncControlsComponent = (function(){
 				optLstBtn.removeClass("open");
 				$(".optionlist").hide();
 			}
+			$(".jp-toggles .btn-volum").removeClass("open");
+			$(".jp-toggles .volume-bar-zone").hide();
 		}
 	})
 
@@ -81,6 +85,8 @@ var fncControlsComponent = (function(){
 				gnbBtn.removeClass("open");
 				$("#gnb").hide();
 			}
+			$(".jp-toggles .btn-volum").removeClass("open");
+			$(".jp-toggles .volume-bar-zone").hide();
 		}
 	})
 	// GNB - INDEX MENU CLICK
@@ -91,6 +97,8 @@ var fncControlsComponent = (function(){
 		$(".current", pager).text(current+1);
 		gnbBtn.removeClass("open");
 		$("#gnb").hide();
+		$(".jp-toggles .btn-volum").removeClass("open");
+		$(".jp-toggles .volume-bar-zone").hide();
 
 		var poster = $("#container .cont").data("poster"), 
 			 movie= $("#container .cont").data("movie");
@@ -121,6 +129,23 @@ var fncControlsComponent = (function(){
 	})
 
 	jplayer(null,null);
+
+	// 볼륨 바
+	$(".jp-toggles .btn-volum").on("click", function(){
+		if($("#container .cont").hasClass("video")==false) return; 
+
+		if($(this).hasClass("open"))$(".volume-bar-zone").hide();
+		else $(".volume-bar-zone").show();
+
+		$(this).toggleClass("open");
+	})
+
+	// close function 
+	function closeAll(){
+		$(".jp-toggles .btn-volum").removeClass("open");
+		$(".jp-toggles .volume-bar-zone").hide();
+
+	}
 })();
 
 /* -----------------------------------------------------------------
@@ -223,6 +248,7 @@ function jplayer(pasterUrl, moiveUrl){
 		max: 1,
 		range: "min",
 		step: 0.01,
+		orientation: "vertical",
 		value : $.jPlayer.prototype.options.volume,
 		slide: function(event, ui) {
 			myPlayer.jPlayer("option", "muted", false);
@@ -230,8 +256,15 @@ function jplayer(pasterUrl, moiveUrl){
 		}
 	});
 
+	// click
+	$(".playerui a").on("click", function(){
+		if($(".btn-volum").hasClass("open")){
+			$(".btn-volum").removeClass("open");
+			$(".volume-bar-zone").hide();
+		} 
+	})
+
 	if($("#container .cont.video").length < 1){
 		$("div.jp-video-play").hide();
 	}
-
 }
