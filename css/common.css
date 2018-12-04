@@ -51,7 +51,7 @@
 
 
 
-#controlsMovie {width: 695px; padding-left: 22px; position:absolute; left:170px; bottom:0; height: 60px;box-sizing: border-box}
+#controlsMovie {width: 695px; padding-left: 22px; position:absolute; left:170px; bottom:-60px; height: 60px;box-sizing: border-box; z-index: 100;}
 	.jp-video-play button {overflow:hidden; position: fixed; top:0; left:0; width: 100%; height:610px; background: url(../images/common/btn-play.png) no-repeat 50% 50%; text-indent: -999em;}
 
 	.progressui {display:inline-block; position: relative; width: 420px; vertical-align: top} 	
@@ -63,11 +63,13 @@
 		.jp-duration:before {display: inline-block; content: "/"; margin-right: 5px }
 
 	.playerui {display:inline-block; position: relative; height:60px; width:145px; vertical-align: top;  box-sizing: border-box;}
-		a.jp-play {display:inline-block; position: absolute; left:0; top:8px; width: 44px; height: 44px; text-indent: -999em; background: url(../images/common/sp-img.png) no-repeat -100px 0; z-index: 1;}
-		a.jp-pause {display:inline-block; position: absolute; left:0; top:8px; width: 44px; height: 44px; text-indent: -999em; background: url(../images/common/sp-img.png) no-repeat -200px 0;}
-		a.jp-stop {display:inline-block; position: absolute; left:50px; top:8px;  width: 44px; height: 44px; text-indent: -999em; background: url(../images/common/sp-img.png) no-repeat -100px -50px; z-index: 1;}
-		a.jp-repeat {display:inline-block; position: absolute; left:100px; top:8px; width: 44px; height: 44px; text-indent: -999em; background: url(../images/common/sp-img.png) no-repeat -300px 0; z-index: 1;}
-		a.jp-repeat-off {display:inline-block; position: absolute; left:100px; top:8px;  width: 44px; height: 44px; text-indent: -999em; background: url(../images/common/sp-img.png) no-repeat -300px -50px;}
+		li.jp-play {display:block !important;}
+		a.jp-play {display:inline-block !important; position: absolute; left:0; top:8px; width: 44px; height: 44px; text-indent: -999em; background: url(../images/common/sp-img.png) no-repeat -100px 0; z-index: 1;}
+		li.jp-pause {display:block !important;}
+		a.jp-pause {display:inline-block !important; position: absolute; left:50px; top:8px; width: 44px; height: 44px; text-indent: -999em; background: url(../images/common/sp-img.png) no-repeat -200px 0;}
+		a.jp-stop {display:inline-block; position: absolute; left:100px; top:8px;  width: 44px; height: 44px; text-indent: -999em; background: url(../images/common/sp-img.png) no-repeat -300px -0px; z-index: 1;}
+		/*a.jp-repeat {display:inline-block; position: absolute; left:100px; top:8px; width: 44px; height: 44px; text-indent: -999em; background: url(../images/common/sp-img.png) no-repeat -300px 0; z-index: 1;}*/
+		/*a.jp-repeat-off {display:inline-block; position: absolute; left:100px; top:8px;  width: 44px; height: 44px; text-indent: -999em; background: url(../images/common/sp-img.png) no-repeat -300px -50px;}*/
 		a.jp-mute {display: inline-block; position:absolute; left:170px; top:20px; width:21px; height: 16px; background: url(../images/common/sp-img.png) no-repeat  0 -50px; text-indent:-999em;}
 		a.jp-unmute {display: inline-block; position:absolute; left:170px; top:20px; width:21px; height: 16px; background: url(../images/common/sp-img.png) no-repeat  -50px -50px; text-indent:-999em;}
 	.jp-toggles {position: absolute; left:590px; top:21px; width: 75px;}
@@ -101,9 +103,12 @@
 #container {background: #f6f6f6}
 #container .cont {overflow: hidden; height:610px;}
 #container .cont > * {-ms-animation:fadeinmove 1s ease; -webkit-animation:fadeinmove 1s ease; -moz-animation:fadeinmove 1s ease;  animation:fadeinmove 1s ease; }
-#container .cont > img:only-child {-ms-animation:fadein 1s ease !important; -webkit-animation:fadein 1s ease !important; -moz-animation:fadein 1s ease !important;  animation:fadein 1s ease !important; }
+#container .cont > img:only-child {-ms-animation:fadeinmove 1s ease !important; -webkit-animation:fadeinmove 1s ease !important; -moz-animation:fadeinmove 1s ease !important;  animation:fadeinmove 1s ease !important; }
 #container .cont.video > * {animation:none;}
 .cont .pagetit {color:#3d3d3d; text-align: center; font-size: 40px; font-weight: bold; font-family: "Binggrae"}
+#jp-movie-zone.jp-video-full .cont  {height: auto}
+#jp-movie-zone.jp-video-full #controlsMovie {position: relative; left:50%; bottom: 0; margin-left: -350px}
+
 
 
 /* POPUP */
@@ -155,8 +160,8 @@
 	to {opacity:1;  transform: translateY(0px);}
 }
 @keyframes fadein {
-	from {opacity: 0; transform: translateY(30px);}
-	to {opacity:1;  transform: translateY(0px);}
+	from {opacity: 0;}
+	to {opacity:1;  }
 }
 
 @keyframes shake {

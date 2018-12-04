@@ -13,7 +13,38 @@
 	<div id="wrap">
 		<main>
 			<div id="container">
-				<!-- 내용 불러오는 곳 -->
+				<div id="jp-movie-zone" class="jp-video jp-video-360p" role="application" aria-label="media player">
+					<div id="content"> <!-- 내용 불러오는 곳 --> </div>
+					<div id="controlsMovie">
+						<div id="jp_container_1">
+							<div class="jp-gui ui-widget ui-widget-content ui-corner-all">
+								<div class="progressui">
+									<div class="jp-progress-slider"></div>
+									<div class="jp-current-time"></div>
+									<div class="jp-duration"></div>
+								</div>
+								<ul class="playerui">
+									<li class="jp-play ui-state-default ui-corner-all">
+										<a href="javascript:;" class="jp-play ui-icon ui-icon-play" tabindex="1" title="play">play</a>
+									</li>
+									<li class="jp-pause ui-state-default ui-corner-all">
+										<a href="javascript:;" class="jp-pause ui-icon ui-icon-pause" tabindex="1" title="pause">pause</a>
+									</li>
+									<li class="jp-stop ui-state-default ui-corner-all">
+										<a href="javascript:;" class="jp-stop ui-icon ui-icon-stop" tabindex="1" title="stop">stop</a>
+									</li>
+								</ul>
+								<div class="jp-toggles">
+									<button type="button" class="btn-volum">sound</button>
+									<div class="volume-bar-zone ">
+										<div class="jp-volume-slider"></div>
+									</div>
+									<button class="jp-full-screen" role="button" tabindex="0">full screen</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 			<!-- 하단 컨트롤러  -->
 			<div id="controls">
@@ -53,53 +84,6 @@
 						</nav>
 					</div>
 				</div>
-				<div id="controlsMovie">
-					<div id="jp_container_1" class="jp-video jp-video-360p"role="application" aria-label="media player">
-						<div class="jp-gui ui-widget ui-widget-content ui-corner-all">
-							<!-- <div class="jp-video-play">
-								<button class="jp-video-play-icon" role="button" tabindex="0">play</button>
-							</div> -->
-							<div class="progressui">
-								<div class="jp-progress-slider"></div>
-								<div class="jp-current-time"></div>
-								<div class="jp-duration"></div>
-							</div>
-							<ul class="playerui">
-								<li class="jp-play ui-state-default ui-corner-all">
-									<a href="javascript:;" class="jp-play ui-icon ui-icon-play" tabindex="1" title="play">play</a>
-								</li>
-								<li class="jp-pause ui-state-default ui-corner-all">
-									<a href="javascript:;" class="jp-pause ui-icon ui-icon-pause" tabindex="1" title="pause">pause</a>
-								</li>
-								<li class="jp-stop ui-state-default ui-corner-all">
-									<a href="javascript:;" class="jp-stop ui-icon ui-icon-stop" tabindex="1" title="stop">stop</a>
-								</li>
-								<li class="jp-repeat ui-state-default ui-corner-all">
-									<a href="javascript:;" class="jp-repeat ui-icon ui-icon-refresh" tabindex="1" title="repeat">repeat</a>
-								</li>
-								<li class="jp-repeat-off ui-state-default ui-state-active ui-corner-all">
-									<a href="javascript:;" class="jp-repeat-off ui-icon ui-icon-refresh" tabindex="1" title="repeat off">repeat off</a>
-								</li>
-								<!-- <li class="jp-mute ui-state-default ui-corner-all">
-									<a href="javascript:;" class="jp-mute ui-icon ui-icon-volume-off" tabindex="1" title="mute">mute</a>
-								</li>
-								<li class="jp-unmute ui-state-default ui-state-active ui-corner-all">
-									<a href="javascript:;" class="jp-unmute ui-icon ui-icon-volume-off" tabindex="1" title="unmute">unmute</a>
-								</li> -->
-								<!-- <li class="jp-volume-max ui-state-default ui-corner-all">
-									<a href="javascript:;" class="jp-volume-max ui-icon ui-icon-volume-on" tabindex="1" title="max volume">max volume</a>
-								</li> -->
-							</ul>
-							<div class="jp-toggles">
-								<button type="button" class="btn-volum">sound</button>
-								<div class="volume-bar-zone ">
-									<div class="jp-volume-slider"></div>
-								</div>
-								<button class="jp-full-screen" role="button" tabindex="0">full screen</button>
-							</div>
-						</div>
-					</div>
-				</div>
 				<div id="controlsPage">
 					<p class="number">
 						<span class="current">1</span>
@@ -111,11 +95,16 @@
 			</div>
 			<!--// 하단 컨트롤러  -->
 		</main>
+
+		<!-- auido player -->
+		<div id="jquery_jplayer_2" class="jp-jplayer"></div>
+		<div id="jp_container_2"></div>
+		<!--// auido player -->
 		
 		<!-- 페이지 컨텐츠  -->
 		<div class="contLst">
 			<!-- page1 메인 -->
-			<div class="part03-1 cont">
+			<div class="part03-1 cont" data-bgm="../audio/3_30bgm.mp3">
 				<h1><span class="br">긍정적 행동지원</span><span class="color1">문제행동 중재</span></h1>
 				<p class="name">강사 : 윤주연</p>
 				<p class="img"><button class="btn-start"><img src="../images/part03/btn-start.png" alt=""></button></p>
@@ -305,7 +294,7 @@
 		}else{
 			if(num >= 1) {
 				answer.fadeIn(200);
-				$(this).closest("div[class*='part03-']").find(".btn-next-zone").show();
+				$(this).addClass("fail").closest("div[class*='part03-']").find(".btn-next-zone").show();
 			}
 			$(this).addClass("shake");
 			num++;
@@ -316,6 +305,9 @@
 		$(this).closest("div[class*='part03-']").hide();
 		$(this).closest("div[class*='part03-']").next("div[class*='part03-']").show();
 		num=0;
+	})
+	$("#controlsPage .prev, #controlsPage .next, #gnb a[data-idx='5']").on("click", function(){
+		num = 0;
 	})
 
 	// 사전학습 퀴즈	

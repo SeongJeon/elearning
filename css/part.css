@@ -2,26 +2,6 @@
 
 
 
-/* CONTAINER */
-.contLst {display: none}
-#container {background: #f6f6f6}
-#container .cont {overflow: hidden; height:610px;}
-#container .cont > * {-ms-animation:fadeinmove 1s ease; -webkit-animation:fadeinmove 1s ease; -moz-animation:fadeinmove 1s ease;  animation:fadeinmove 1s ease; }
-#container .cont > img:only-child {-ms-animation:fadein 1s ease !important; -webkit-animation:fadein 1s ease !important; -moz-animation:fadein 1s ease !important;  animation:fadein 1s ease !important; }
-#container .cont.video > * {animation:none;}
-.cont .pagetit {color:#3d3d3d; text-align: center; font-size: 40px; font-weight: bold; font-family: "Binggrae"}
-
-
-
-
-
-
-
-
-
-
-
-
 /* 컨텐츠 공통 - 마지막 페이지 */
 .lastpage {background: url(../images/part01/last.png) no-repeat 50% 50%; text-align: center; font-family: "Binggrae";}
 	.lastpage .currentpart {padding-top: 130px; color:#838383; font-size: 25px; font-weight: bold;}
@@ -40,8 +20,9 @@
 	.quizCont .answerlst li {display: inline-block;}
 	.quizCont .answerlst li + li {margin-left: 18px}
 	.quizCont .answerlst button {position: relative; font-size:18px; color: #3d3d3d; height:30px; width: 122px; border-width:1px; border-style:solid; border-radius:15px; text-align: center;}
-	.quizCont .answerlst button.selected:after {display: block; position: absolute; left:0; top:0; content: ""; width: 100%; height: 100%; border-width:2px; border-style:solid; border-radius: 15px; box-sizing: border-box;}
+	.quizCont .answerlst button.answer.selected:after {display: block; position: absolute; left:0; top:0; content: ""; width: 100%; height: 100%; border-width:2px; border-style:solid; border-radius: 15px; box-sizing: border-box;}
 	.quizCont .answerlst button.shake {animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both !important; -webkit-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); backface-visibility: hidden; perspective: 1000px;}
+	.quizCont .answerlst button.fail:after {display: inline-block; content: ""; width: 41px; height: 41px; position: absolute; left:0; top:-6px; -ms-animation:fadein 1s ease; -webkit-animation:fadein 1s ease; -moz-animation:fadein 1s ease;  animation:fadein 1s ease;}
 	.quizCont .answerzone {display:none; width: 812px; height:170px; margin:118px 0 0 97px; background: #fff; box-shadow: 0 4px 27px rgba(0,0,0,0.3); border-radius: 25px; -ms-animation:fadeinmove 1s ease; -webkit-animation:fadeinmove 1s ease; -moz-animation:fadeinmove 1s ease;  animation:fadeinmove 1s ease;}
 	.quizCont .answerzone > div {display: table-cell; width: 812px; height: 170px; vertical-align: middle;}
 	.quizCont .answerzone .answerTix {font-size: 50px; color: #3d3d3d}
@@ -53,23 +34,28 @@
 	.quizCont .answerlst.row li + li {margin-left: 0; margin-top: 4px;}
 	.quizCont .answerlst.row button {width:auto; height:30px; max-width: 724px; text-align: left; padding: 0 9px 0 38px; box-sizing: border-box; letter-spacing: -1px;}
 	.quizCont .answerlst.row button span {position: absolute; left:15px; top:0; line-height: 28px;}
-	.quizCont .answerlst.row button.selected {border-width:1px; border-color:#ec5665;}
+	.quizCont .answerlst.row button.answer.selected {border-width:1px; border-color:#ec5665;}
 
 	.btn-next-zone {display:none; position:absolute; top:337px; left:0; width:100%; text-align: right; padding-right: 91px; box-sizing:border-box;-ms-animation:fadeinmove 1s ease; -webkit-animation:fadeinmove 1s ease; -moz-animation:fadeinmove 1s ease;  animation:fadeinmove 1s ease;}
 	.btn-next-zone .btn-next {position:relative; padding-left: 25px; color:#fff; font-size: 16px; text-align: left; width: 150px; height: 38px; background: #4c4c4c;  border-radius: 100px;}
 	.btn-next-zone .btn-next:after {display: inline-block; content: ""; position: absolute; right:20px; top:0; background: url(../images/common/sp-img.png) no-repeat -200px -200px; width: 8px; height: 38px;}
 
 	div.quizCont[class*="part01"] .answerlst button {border-color:#d7c2a9;}
-	div.quizCont[class*="part01"] .answerlst button.selected {border-color:#ec5665;}
-	div.quizCont[class*="part01"] .answerlst button.selected:after {border-color:#ec5665;}
+	div.quizCont[class*="part01"] .answerlst button.answer.selected {border-color:#ec5665;}
+	div.quizCont[class*="part01"] .answerlst button.answer.selected:after {border-color:#ec5665;}
+	div.quizCont[class*="part01"] .answerlst button.fail:after {top:-17px; width:63px; height:63px; left:50%; margin-left:-32px; background: url(../images/part01/img-fail-big.png) no-repeat 50% 50%;}
 
 	div.quizCont[class*="part02"] .answerlst button {border-color:#9dcae8;}
-	div.quizCont[class*="part02"] .answerlst button.selected {border-color:#ec5665;}
-	div.quizCont[class*="part02"] .answerlst button.selected:after {border-color:#ec5665;}
+	div.quizCont[class*="part02"] .answerlst button.answer.selected {border-color:#ec5665;}
+	div.quizCont[class*="part02"] .answerlst button.answer.selected:after {border-color:#ec5665;}
+	div.quizCont[class*="part02"] .answerlst button.fail:after {background: url(../images/part02/img-fail-small.png) no-repeat 50% 50%;}
 
 	div.quizCont[class*="part03"] .answerlst button {border-color:#e6afb5;}
-	div.quizCont[class*="part03"] .answerlst button.selected {border-color:#e248b0;}
-	div.quizCont[class*="part03"] .answerlst button.selected:after {border-color:#e248b0;}
+	div.quizCont[class*="part03"] .answerlst button.answer.selected {border-color:#e248b0;}
+	div.quizCont[class*="part03"] .answerlst button.answer.selected:after {border-color:#e248b0;}
+	div.quizCont[class*="part03"] .answerlst button.fail:after {background: url(../images/part03/img-fail-small.png) no-repeat 50% 50%;}
+	div.quizCont[class*="part03"] div[class*="part03-7"] .answerlst button.fail:after {top:-17px; width:63px; height:63px; left:50%; margin-left:-32px; background: url(../images/part03/img-fail-big.png) no-repeat 50% 50%;}
+	div.quizCont[class*="part03"] div[class*="part03-8"] .answerlst button.fail:after {top:-17px; width:63px; height:63px; left:50%; margin-left:-32px; background: url(../images/part03/img-fail-big.png) no-repeat 50% 50%;}
 
 /* 컨텐츠 공통 - 표지 */
 div.posterpage[class*="part01-"] {background: url(../images/part01/bg-poster.jpg) no-repeat 50% 50%; }

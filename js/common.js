@@ -12,7 +12,7 @@ var fncControlsComponent = (function(){
 	var pager = $("#controlsPage .number"),
 		 gnbBtn = $(".navZone .btn"),
 		 optLstBtn = $(".optionZone .btn"),
-		 cont = $(".contLst"), container = $("#container");
+		 cont = $(".contLst"), container = $("#content");
 	var current = 0, spd =300,
 		 maxNum =  $(".cont", cont).length, html;
 
@@ -22,9 +22,12 @@ var fncControlsComponent = (function(){
 	$(".contLst > .cont").each(function(i){
 		$(this).attr("data-cont", i);
 		if(i==0){
-			$(this).clone().appendTo("#container");
+			$(this).clone().appendTo("#content");
+			var bgm = container.find(".cont").data("bgm");
+			bgmPlayer(bgm);
 		}
 	})
+	moviePlayer(null,null);
 
 
 	// PAGER CONTROLS
@@ -49,8 +52,10 @@ var fncControlsComponent = (function(){
 
 		var poster = $("#container .cont").data("poster"), 
 			 movie= $("#container .cont").data("movie");
-
-		jplayer(poster, movie);
+		var bgm = $("#container .cont").data("bgm");
+		moviePlayer(poster, movie);
+		// if(bgm != undefined) 
+		bgmPlayer(bgm);
 	})
 
 	// navZone CONTROLS
@@ -102,7 +107,7 @@ var fncControlsComponent = (function(){
 
 		var poster = $("#container .cont").data("poster"), 
 			 movie= $("#container .cont").data("movie");
-			jplayer(poster, movie);
+			moviePlayer(poster, movie);
 	});
 	// OPTION MENU CLICK
 	$(".optionlist a").on("click", function(){
@@ -128,7 +133,8 @@ var fncControlsComponent = (function(){
 		$("#gnb").hide();
 	})
 
-	jplayer(null,null);
+
+
 
 	// 볼륨 바
 	$(".jp-toggles .btn-volum").on("click", function(){
@@ -139,32 +145,32 @@ var fncControlsComponent = (function(){
 
 		$(this).toggleClass("open");
 	})
+	// click
+	$(".playerui a").on("click", function(){
+		if($(".btn-volum").hasClass("open")){
+			$(".btn-volum").removeClass("open");
+			$(".volume-bar-zone").hide();
+		} 
+	})
 
-	// close function 
-	function closeAll(){
-		$(".jp-toggles .btn-volum").removeClass("open");
-		$(".jp-toggles .volume-bar-zone").hide();
 
-	}
 })();
 
+
 /* -----------------------------------------------------------------
-PLAYER
+MOVIE PLAYER
 ----------------------------------------------------------------- */
-function jplayer(pasterUrl, moiveUrl){
+function moviePlayer(pasterUrl, moiveUrl){
 	var myPlayer = $("#jquery_jplayer_1"),
 		myPlayerData,
-		fixFlash_mp4, // Flag: The m4a and m4v Flash player gives some old currentTime values when changed.
-		fixFlash_mp4_id, // Timeout ID used with fixFlash_mp4
-		ignore_timeupdate, // Flag used with fixFlash_mp4
+		fixFlash_mp4, 
+		fixFlash_mp4_id, 
+		ignore_timeupdate, 
 		options = {
 			ready: function (event) {
-				// Hide the volume slider on mobile browsers. ie., They have no effect.
 				if(event.jPlayer.status.noVolume) {
-					// Add a class and then CSS rules deal with it.
 					$(".jp-gui").addClass("jp-no-volume");
 				}
-				// Determine if Flash is being used and the mp4 media type is supplied. BTW, Supplying both mp3 and mp4 is pointless.
 				fixFlash_mp4 = event.jPlayer.flash.used && /m4a|m4v/.test(event.jPlayer.options.supplied);
 				// Setup the player with media.
 				$(this).jPlayer("setMedia", {
@@ -194,7 +200,7 @@ function jplayer(pasterUrl, moiveUrl){
 			},
 			swfPath: "../dist/jplayer",
 			supplied: "webmv, ogv, m4v",
-			cssSelectorAncestor: "#jp_container_1",
+			cssSelectorAncestor: "#jp-movie-zone",
 			wmode: "window",
 			smoothPlayBar: true,
 			keyEnabled: true
@@ -256,15 +262,46 @@ function jplayer(pasterUrl, moiveUrl){
 		}
 	});
 
-	// click
-	$(".playerui a").on("click", function(){
-		if($(".btn-volum").hasClass("open")){
-			$(".btn-volum").removeClass("open");
-			$(".volume-bar-zone").hide();
-		} 
-	})
+	// if($("#container .cont.video").length < 1){
+	// 	$("div.jp-video-play").hide();
+	// }
+}
 
-	if($("#container .cont.video").length < 1){
-		$("div.jp-video-play").hide();
+// 리프래쉬 
+$(document).on("click", ".playerui .jp-stop", function(){
+	$("#jquery_jplayer_1").jPlayer("play");
+})
+
+
+/* -----------------------------------------------------------------
+AUDIO PLAYER
+----------------------------------------------------------------- */
+function bgmPlayer(bgmUrl){
+	if(bgmUrl == undefined){
+		$("#jquery_jplayer_2").jPlayer("stop");
+	}else{
+		$("#jquery_jplayer_2").jPlayer("setMedia", {
+			title: "bgm auido",
+			mp3: bgmUrl
+		}).jPlayer("play");
 	}
+
+	$("#jquery_jplayer_2").jPlayer({
+		ready: function (event) {
+			$(this).jPlayer("setMedia", {
+				title: "bgm auido",
+				mp3: bgmUrl
+			}).jPlayer("play");
+		},
+		swfPath: "../dist/jplayer",
+		supplied: "mp3",
+		wmode: "window",
+		useStateClassSkin: true,
+		autoBlur: false,
+		cssSelectorAncestor: "#jp_container_2",
+		smoothPlayBar: true,
+		keyEnabled: true,
+		remainingDuration: true,
+		toggleDuration: true
+	});
 }
