@@ -14,7 +14,8 @@ var fncControlsComponent = (function(){
 		 optLstBtn = $(".optionZone .btn"),
 		 cont = $(".contLst"), container = $("#content");
 	var current = 0, spd =300,
-		 maxNum =  $(".cont", cont).length, html;
+		 maxNum =  $(".cont", cont).length, html, 
+		 btnbgm = "../audio/sound/Switch.mp3";
 
 	// DEFAULT
 	pager.find('.current').text(current+1);
@@ -25,6 +26,7 @@ var fncControlsComponent = (function(){
 			$(this).clone().appendTo("#content");
 			var bgm = container.find(".cont").data("bgm");
 			bgmPlayer(bgm);
+			btnPlayer(btnbgm);
 		}
 	})
 	moviePlayer(null,null);
@@ -54,8 +56,8 @@ var fncControlsComponent = (function(){
 			 movie= $("#container .cont").data("movie");
 		var bgm = $("#container .cont").data("bgm");
 		moviePlayer(poster, movie);
-		// if(bgm != undefined) 
 		bgmPlayer(bgm);
+		btnPlayer(btnbgm);
 	})
 
 	// navZone CONTROLS
@@ -74,6 +76,7 @@ var fncControlsComponent = (function(){
 			$(".jp-toggles .btn-volum").removeClass("open");
 			$(".jp-toggles .volume-bar-zone").hide();
 		}
+		btnPlayer(btnbgm);
 	})
 
 	// partListZone CONTROLS
@@ -93,6 +96,7 @@ var fncControlsComponent = (function(){
 			$(".jp-toggles .btn-volum").removeClass("open");
 			$(".jp-toggles .volume-bar-zone").hide();
 		}
+		btnPlayer(btnbgm);
 	})
 	// GNB - INDEX MENU CLICK
 	$(document).on("click","#gnb a", function(e){
@@ -107,7 +111,9 @@ var fncControlsComponent = (function(){
 
 		var poster = $("#container .cont").data("poster"), 
 			 movie= $("#container .cont").data("movie");
-			moviePlayer(poster, movie);
+		moviePlayer(poster, movie);
+		var bgm = $("#container .cont").data("bgm");
+		bgmPlayer(bgm);			
 	});
 	// OPTION MENU CLICK
 	$(".optionlist a").on("click", function(){
@@ -131,6 +137,11 @@ var fncControlsComponent = (function(){
 		$(".current", pager).text(current+1);
 		gnbBtn.removeClass("open");
 		$("#gnb").hide();
+
+		//hoho 추가
+		var bgm = $("#container .cont").data("bgm");
+		bgmPlayer(bgm);
+		btnPlayer('../audio/sound/beeps5.mp3');
 	})
 
 
@@ -151,9 +162,8 @@ var fncControlsComponent = (function(){
 			$(".btn-volum").removeClass("open");
 			$(".volume-bar-zone").hide();
 		} 
+		btnPlayer(btnbgm);
 	})
-
-
 })();
 
 
@@ -299,6 +309,41 @@ function bgmPlayer(bgmUrl){
 		useStateClassSkin: true,
 		autoBlur: false,
 		cssSelectorAncestor: "#jp_container_2",
+		smoothPlayBar: true,
+		keyEnabled: true,
+		remainingDuration: true,
+		toggleDuration: true
+	});
+}
+
+
+/* -----------------------------------------------------------------
+BTN PLAYER
+----------------------------------------------------------------- */
+function btnPlayer(bgmUrl){
+	if(bgmUrl == undefined){
+		$("#jquery_jplayer_3").jPlayer("stop");
+	}else{
+		$("#jquery_jplayer_3").jPlayer("setMedia", {
+			title: "bgm auido",
+			mp3: bgmUrl
+		}).jPlayer("play");
+	}
+
+	$("#jquery_jplayer_3").jPlayer({
+		ready: function (event) {
+			$(this).jPlayer("setMedia", {
+				title: "bgm auido",
+				mp3: bgmUrl,
+				wav: bgmUrl
+			});
+		},
+		swfPath: "../dist/jplayer",
+		supplied: "mp3, wav",
+		wmode: "window",
+		useStateClassSkin: true,
+		autoBlur: false,
+		cssSelectorAncestor: "#jp_container_3",
 		smoothPlayBar: true,
 		keyEnabled: true,
 		remainingDuration: true,

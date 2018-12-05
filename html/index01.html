@@ -101,16 +101,21 @@
 		<div id="jp_container_2"></div>
 		<!--// auido player -->
 
+		<!-- BTN BGM player -->
+		<div id="jquery_jplayer_3" class="jp-jplayer"></div>
+		<div id="jp_container_3"></div>
+		<!--// BTN BGM player -->
+
 		<!-- 페이지 컨텐츠  -->
 		<div class="contLst">
 			<!-- page1 메인 -->
-			<div class="part01-1 cont" data-bgm="../audio/1_30bgm.mp3">
+			<div class="part01-1 cont" data-bgm="../audio/1_1na.mp3">
 				<h1><span class="br">영아기</span><span class="point1">뇌발달과</span> <span class="point2">미디어</span></h1>
 				<p class="name">강사 : 정미현</p>
 				<p class="img"><button class="btn-start"><img src="../images/part01/btn-start.png" alt=""></button></p>
 			</div>
 			<!-- page2 사전학습 -->
-			<div class="part01-2 cont">
+			<div class="part01-2 cont"  data-bgm="../audio/1_2na.mp3">
 				<p class="location lo1">사전학습</p>
 				<h2 class="quiztit"><div><span class="color2">영아기 부모</span>들로부터 <span class="color1">다음과 같은 질문</span>을 받게 된다면 </div>어떻게 대답하시겠습니까?</h2>
 				<p class="desc">질문을 선택하여 읽어보고, 답변을 생각해본 후, 전문가 의견을 확인해 보세요.</p>
@@ -140,7 +145,7 @@
 				</div>
 			</div>
 			<!-- page3 학습목표 -->
-			<div class="part01-3 cont">
+			<div class="part01-3 cont" data-bgm="../audio/1_3na.mp3">
 				<p class="location lo2">들어가기>학습목표</p>
 				<img src="../images/part01/p1_p7.png" alt="">
 			</div>
@@ -153,7 +158,7 @@
 				<div id="jquery_jplayer_1" class="jp-jplayer"> </div>
 			</div>
 			<!-- page6 퀴즈1 -->
-			<div class="part01 quizCont cont">
+			<div class="part01 quizCont cont"  data-bgm="../audio/1_4na.mp3">
 				<p class="location lo5">정리하기>퀴즈</p>
 				<div class="part01-8">
 					<p class="quiz"><em class="num">Q1</em>대뇌피질 중 종합적 사고기능을 담당하고 있으며 인간의 뇌의 40%를 <br>차지하고 있는 것은?</p>
@@ -204,12 +209,12 @@
 				</div>
 			</div>
 			<!-- page7 정리하기 -->
-			<div class="part01-12 cont">
+			<div class="part01-12 cont" data-bgm="../audio/1_6na.mp3">
 				<p class="location lo7">정리하기>학습정리</p>
 				<img src="../images/part01/p1_p16.png" alt="">
 			</div>
 			<!-- page8 보충심화학습(아이프레임) -->
-			<div class="part01-11 cont">
+			<div class="part01-11 cont" data-bgm="../audio/1_5na.mp3">
 				<p class="location lo6">정리하기>보충학습</p>
 				<p class="txt">학습 후 보충 심화 학습자료를 확인해보세요.</p>
 				<div class="iframe">
@@ -233,7 +238,7 @@
 				</div>
 			</div>
 			<!-- page9 마지막 페이지 -->
-			<div class="part01-13 lastpage cont">
+			<div class="part01-13 lastpage cont"  data-bgm="../audio/1_7na.mp3">
 				<p class="currentpart">영아기 뇌발달과 미디어</p>
 				<p class="nextpart"><span class="br">영아의</span><span class="point1">자유놀이와</span> <span class="point2">교사의 역할</span></p>
 			</div>
@@ -341,6 +346,7 @@
 	})
 	doc.on("click", ".quizlst button", function(){
 		_idx = $(this).closest("li").index();
+		btnPlayer('../audio/sound/beeps5.mp3');
 		$(this).closest(".cont").find(".form input").removeAttr("disabled");
 		$(this).closest(".quizlst").hide();
 		$(this).closest(".quizlst").next(".quizAnswer").find(">div").eq(_idx).show();

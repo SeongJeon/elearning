@@ -100,17 +100,22 @@
 		<div id="jquery_jplayer_2" class="jp-jplayer"></div>
 		<div id="jp_container_2"></div>
 		<!--// auido player -->
+
+		<!-- BTN BGM player -->
+		<div id="jquery_jplayer_3" class="jp-jplayer"></div>
+		<div id="jp_container_3"></div>
+		<!--// BTN BGM player -->
 		
 		<!-- 페이지 컨텐츠  -->
 		<div class="contLst">
 			<!-- page1 메인 -->
-			<div class="part02-1 cont" data-bgm="../audio/2_15bgm.mp3">
+			<div class="part02-1 cont" data-bgm="../audio/2_1na.mp3">
 				<h1><span class="br">문제행동별</span><span class="point1">지도방안</span></h1>
 				<p class="name">강사 : 김경미</p>
 				<p class="img"><button class="btn-start"><img src="../images/part02/btn-start.png" alt=""></button></p>
 			</div>
 			<!-- page2 사전학습 -->
-			<div class="part02-2 cont">
+			<div class="part02-2 cont" data-bgm="../audio/2_2na.mp3">
 				<p class="location lo1">들어가기>사전학습</p>
 				<!-- 사전학습 질문 -->
 				<div class="part02-2-1">
@@ -134,7 +139,7 @@
 				</div>
 			</div>
 			<!-- page3 학습목표 -->
-			<div class="part02-3 cont">
+			<div class="part02-3 cont" data-bgm="../audio/2_3na.mp3">
 				<p class="location lo2">들어가기>학습목표</p>
 				<img src="../images/part02/p2_p4.png" alt="">
 			</div>
@@ -147,7 +152,7 @@
 				<div id="jquery_jplayer_1" class="jp-jplayer"> </div>
 			</div>
 			<!-- page6 퀴즈 -->
-			<div class="part02-6 quizCont cont">
+			<div class="part02-6 quizCont cont" data-bgm="../audio/2_4na.mp3">
 				<p class="location lo5">정리하기>퀴즈</p>
 				<div class="part02-6">
 					<p class="quiz"><em class="num">Q1</em>다음 중 화에 대한 설명으로 바르지 않은 것은?</p>
@@ -198,12 +203,12 @@
 				</div>
 			</div>
 			<!-- page7 정리하기 -->
-			<div class="part02-10 cont">
+			<div class="part02-10 cont"  data-bgm="../audio/2_6na.mp3">
 				<p class="location lo7">정리하기>학습정리</p>
 				<img src="../images/part02/p2_p28.png" alt="">
 			</div>
 			<!-- page8 보충심화학습(아이프레임) -->
-			<div class="part02-9 cont">
+			<div class="part02-9 cont" data-bgm="../audio/2_5na.mp3">
 				<p class="location lo6">정리하기>보충학습</p>
 				<p class="txt">학습 후 보충 심화 학습자료를 확인해보세요.</p>
 				<div class="iframe">
@@ -232,7 +237,7 @@
 				</div>
 			</div>
 			<!-- page9 마지막 페이지 -->
-			<div class="part02-27 lastpage cont">
+			<div class="part02-27 lastpage cont" data-bgm="../audio/2_7na.mp3">
 				<p class="currentpart">문제행동별 지도방안</p>
 				<p class="nextpart"><span class="br">부모와의</span>상담</p>
 			</div>
@@ -305,10 +310,12 @@
 		if(num > 1) return false;
 
 		if(temp){
+			btnPlayer('../audio/sound/chime.wav');
 			answer.fadeIn(200);
 			$(this).closest("div[class*='part02-']").find(".btn-next-zone").show();
 			num = 2;
 		}else{
+			btnPlayer('../audio/sound/wrong.wav');
 			if(num >= 1) {
 				answer.fadeIn(200);
 				$(this).addClass("fail").closest("div[class*='part02-']").find(".btn-next-zone").show();
